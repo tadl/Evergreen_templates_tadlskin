@@ -1,2 +1,2 @@
-       <div id="topnav_logo"> <a href="http://www.tadl.org/"><img alt="[% l('TADL Logo') %]" 
-            src="https://www.tadl.org/sites/all/themes/converge_custom/logo.png" /></a></div>
+       <div id="topnav_logo"> <a href="/eg/opac/home"><img alt="[% l('TADL Logo') %]" 
+            src="[% ctx.media_prefix %]/images/tadl/logo.png" /></a></div>
