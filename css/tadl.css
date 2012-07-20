@@ -141,10 +141,10 @@ span.dash_divider {
 
 #logout_link { left: 1px; }
 
-#dash_checked { color: #ffcc33; }
-#dash_holds { color: #ffcc33; }
-#dash_pickup { color: #1dd93c; }
-#dash_fines { color: #f41d36; }
+#dash_checked { color: #424242; }
+#dash_holds { color: #424242; }
+#dash_pickup { color: #424242; }
+#dash_fines { color: #424242; }
 #header-wrap {
     width:960px;
     margin: 0 auto;
