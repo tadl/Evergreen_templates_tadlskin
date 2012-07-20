@@ -1,12 +1,13 @@
 <td class="login_boxes right_brain" align="center" valign="top" width="291">
+    <p>&nbsp;</p>
 
-    <a href="http://example.com"><img 
-        src="[% ctx.media_prefix %]/images/questions.png" alt="[% l('Questions?') %]" style="margin-top:29px;" /></a>
+    <a class="tbutton large tadlblue" href="http://www.tadl.org/contact"><span>Questions?</span></a>
+
+    <p>&nbsp;</p>
 
     <div style="width:182px;color:black;padding:5px 25px;">
-        [% l('Visit our FAQs section for answers to common questions about how to use your account.') %]
+        [% l('If you have any questions or need any assistance using our updated catalog, please let us know!') %]
     </div>
-
-    <a href="http://example.com"><img
-        alt="[% l('FAQs') %]" src="[% ctx.media_prefix %]/images/faqs-btn.png" style="margin-top:13px;" /></a>
+<!--
+    <a class="tbutton medium tadlblue" href="http://www.tadl.org/catalog"><span>FAQs&nbsp;&raquo;</span></a> -->
 </td>

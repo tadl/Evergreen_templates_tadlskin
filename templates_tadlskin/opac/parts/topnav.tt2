@@ -8,9 +8,9 @@
         [% IF !ctx.user %]
         <div id="your-acct-login">
             <a href="[% mkurl(ctx.opac_root _ '/myopac/main') %]" 
-                class="opac-button opac-button-header" id="home_myopac_link">
+                class="tbutton medium tadlblue" id="home_myopac_link"><span>
                 [% l('Your Account Log in') %]
-            </a>
+            </span></a>
         </div>
         [% ELSE %]
         <div id="dash_wrapper">
@@ -18,12 +18,12 @@
                 <span id="dash_user">
                     [%  l('[_1] [_2]', ctx.user.first_given_name, ctx.user.family_name) | html %]
                 </span>
-                <span class="dash_divider">|</span>
+                <span class="dash_divider"><!-- | --></span>
                 <a href="[% mkurl(ctx.opac_root _ '/myopac/main') %]" 
-                    class="opac-button">[% l('My Account') %]</a>
+                    class="tbutton small tadlblue"><span>[% l('My Account') %]</span></a>
 
                 <a href="[% mkurl(ctx.opac_root _ '/logout', {}, 1) %]"
-                    class="opac-button" id="logout_link">[% l('Logout') %]</a>
+                    class="tbutton small tadlblue" id="logout_link"><span>[% l('Logout') %]</span></a>
             </div>
             <div id="dashboard">
                 <span class="dash-align">
@@ -57,4 +57,3 @@
 </div>
 </div>
 [% END %]
-[% INCLUDE "opac/parts/topnav_links.tt2" %]

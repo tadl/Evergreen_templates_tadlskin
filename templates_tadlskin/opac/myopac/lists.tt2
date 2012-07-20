@@ -52,8 +52,8 @@
         </table>
     </form>
 
-    <h1>[% l("Your existing lists") %]</h1>
     [% INCLUDE "opac/parts/anon_list.tt2" %]
+    <h1>[% l("Your existing lists") %]</h1>
     [% IF ctx.bookbags.size %]
     <div class="header_middle">
         <span class="float-left">[% l('Saved Lists') %]</span>
@@ -88,10 +88,10 @@
                     [%- INCLUDE "opac/parts/preserve_params.tt2"; %]
                     [% IF bbag.pub != 't' %]
                     <input type="hidden" name="action" value="show" />
-                    <input class="fixed" type="submit" value="[% l('Share') %]" />
+                    <input class="fixed opac-button" type="submit" value="[% l('Share') %]" />
                     [% ELSE %]
                     <input type="hidden" name="action" value="hide" />
-                    <input class="fixed" type="submit" value="[% l('Hide') %]" />
+                    <input class="fixed opac-button" type="submit" value="[% l('Hide') %]" />
                     [% END %]
                 </div>
             </form>
@@ -100,7 +100,7 @@
                     <input type="hidden" name="list" value="[% bbag.id %]" />
                     <input type="hidden" name="action" value="delete" />
                     [%- INCLUDE "opac/parts/preserve_params.tt2"; %]
-                    <input type="submit" value="[% l('Delete List') %]" />
+                    <input type="submit" class="opac-button" value="[% l('Delete List') %]" />
                 </div>
             </form>
             <form action="[% mkurl(ctx.opac_root _ '/myopac/list/print') %]" method="POST">
@@ -108,17 +108,15 @@
                     <input type="hidden" name="list" value="[% bbag.id %]" />
                     <input type="hidden" name="sort" value="[% CGI.param('sort') | html %]" />
                     [%- INCLUDE "opac/parts/preserve_params.tt2"; %]
-                    <input type="submit" value="[% l('Download CSV') %]" />
+                    <input type="submit" class="opac-button" value="[% l('Download CSV') %]" />
                 </div>
             </form>
-            <div class="bookbag-controls">
+            <div class="bookbag-controls" style="margin-top:0px;">
                 [% IF bbag.pub == 't'; %]
-                <a target='_blank' href='/opac/extras/feed/bookbag/rss2-full/[% bbag.id %]'><img
-                    alt="[% l('RSS Feed') %]" border="0"
-                    src="[% ctx.media_prefix %]/images/small-rss.png"/></a>
+                <a target='_blank' href='/opac/extras/feed/bookbag/rss2-full/[% bbag.id %]' class='tbutton small tadlblue'><span>[% l('RSS') %]</span></a>
                 [% END %]
             </div>
-            <div class="bookbag-controls">
+            <div class="bookbag-controls" style="margin-top:0px;">
                 [% IF bbag.pub == 't'; %]
                 <a href='[%-
                     mkurl(
@@ -126,7 +124,7 @@
                         {page => '0', bookbag => bbag.id, depth => 0, locg => ctx.search_ou},
                         1
                     )
-                -%]'>[% l('HTML View') %]</a>
+                -%]' class='tbutton small tadlblue'><span>[% l('HTML') %]</span></a>
                 [% END %]
             </div>
             <div class="clear-both pad-bottom-five"></div>
@@ -141,7 +139,7 @@
                         value=CGI.param('sort') mode='bookbag' %]
                     <input type="hidden" name="bbid"
                         value="[% CGI.param('bbid') | html %]" />
-                    <input type="submit" value="[% l('Sort') %]" />
+                    <input type="submit" class="opac-button" value="[% l('Sort') %]" />
                 </form>
             </div>
             <div class="meta">
@@ -163,7 +161,7 @@
                             </td>
                             <td rowspan="2" class="saver">
                                 [% l("Save changes to name or description?") %]<br />
-                                <input type="submit" value="[% l('Save') %]" />
+                                <input type="submit" class="opac-button" value="[% l('Save') %]" />
                             </td>
                         </tr>
                         <tr>
@@ -211,7 +209,7 @@
                             <option value="del_item">[% l('Remove from list') %]</option>
                         </select>
                         [%- INCLUDE "opac/parts/preserve_params.tt2"; %]
-                        <input type="submit" value="[% l('Go') %]" />
+                        <input type="submit" class="opac-button" value="[% l('Go') %]" />
                     </td>
                 </tr>
             </thead>

@@ -43,12 +43,12 @@
                                             <td class='result_table_pic_header'>
                                                 [% ident = attrs.isbn_clean || attrs.upc; IF ident; %]
                                                 <a href="[% mkurl(ctx.opac_root _ '/record/' _ rec.id) %]"><img alt="[% l('Image of item') %]"
-                                                        name='item_jacket' class='result_table_pic' width="55"
-                                                        src='[% ctx.media_prefix %]/opac/extras/ac/jacket/small/[% ident | uri %]' /></a><br />
+                                                        name='item_jacket' class='result_table_pic' width="100"
+                                                        src='[% ctx.media_prefix %]/opac/extras/ac/jacket/medium/[% ident | uri %]' /></a><br />
                                                 [% END %]
                                             </td>
                                             <td class='result_table_title_cell' name='result_table_title_cell'>
-                                                <div class="bold">
+                                                <div class="bold bigger">
                                                     <a name='record_[% rec.id %]' name='item_title'
                                                         href="[% mkurl(ctx.opac_root _ '/record/' _ rec.id) %]"
                                                         [% HTML.attributes(title => l('Display record details for "[_1]"', attrs.title)) %]

@@ -108,9 +108,9 @@
         [% END %]
         <span>
         [% IF any_failures OR ctx.general_hold_error %]
-        <a href="[% CGI.param('redirect_to') || CGI.referer | html %]">[% l('Cancel') %]</a>
+        <a href="[% CGI.param('redirect_to') || CGI.referer | html %]" class="tbutton small tadlblue"><span>[% l('Cancel') %]</span></a>
         [% ELSE %]
-        <a href="[% CGI.param('redirect_to') || CGI.referer | html %]">[% l('Continue') %]</a>
+        <a href="[% CGI.param('redirect_to') || CGI.referer | html %]" class="tbutton small tadlblue"><span>[% l('Continue') %]</span></a>
         [% END %]
         </span>
     </form>

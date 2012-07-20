@@ -21,18 +21,18 @@
     <div class="almost-content-wrapper">
         <div id="results_header_bar">
             <div id="results_header_inner">
-                <div class="results_header_btns">
-                    <a href="[% mkurl(ctx.opac_root _ '/home') %]">[% l('Another Search') %]</a>
+<!--                <div class="float-left">
+                    <a class="tbutton small tadlblue" href="[% mkurl(ctx.opac_root _ '/home') %]"><span>[% l('Another Search') %]</span></a>
                 </div>
-                <div class="results_header_btns">
-                    <a href="[% mkurl(ctx.opac_root _ '/advanced') %]">[% l('Advanced Search') %]</a>
-                </div>
+                <div class="float-left">
+                    <a class="tbutton small tadlblue" href="[% mkurl(ctx.opac_root _ '/advanced') %]"><span>[% l('Advanced Search') %]</span></a>
+                </div> -->
                 [% IF ctx.mylist.size %]
-                <div class="results_header_btns cached_list_div">
+                <div class="float-left">
                     [%- IF ctx.user; %]
-                    <a href="[% mkurl(ctx.opac_root _ '/myopac/lists') %]">[% l('View My List') %]</a>
+                    <a class="tbutton small tadlblue" href="[% mkurl(ctx.opac_root _ '/myopac/lists') %]"><span>[% l('View My List') %]</span></a>
                     [%- ELSE %]
-                    <a href="[% mkurl(ctx.opac_root _ '/mylist') %]">[% l('View My List') %]</a>
+                    <a class="tbutton small tadlblue" href="[% mkurl(ctx.opac_root _ '/mylist') %]"><span>[% l('View My List') %]</span></a>
                     [%- END %]
                 </div>
                 [% END %]
@@ -42,11 +42,11 @@
                     </label>
                     <div class="results_header_div"></div>
 
-                    <div class='results_header_sel' id='simple-detail-view-links'>
+                    <div class="float-left">
                         [% IF CGI.param('detail_record_view') %]
-                        <a href="[% mkurl('', {detail_record_view => ''}) %]">[% l('Show Fewer Details') %]</a>
+                        <a class="tbutton small tadlblue" href="[% mkurl('', {detail_record_view => ''}) %]"><span>[% l('Show Fewer Details') %]</span></a>
                         [% ELSE %]
-                        <a href="[% mkurl('', {detail_record_view => 1}) %]">[% l('Show More Details') %]</a>
+                        <a class="tbutton small tadlblue" href="[% mkurl('', {detail_record_view => 1}) %]"><span>[% l('Show More Details') %]</span></a>
                         [% END %]
                     </div>
                     <div class="results_header_div"></div>
