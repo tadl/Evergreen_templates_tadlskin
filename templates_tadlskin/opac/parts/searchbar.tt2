@@ -3,17 +3,7 @@
     [% UNLESS took_care_of_form -%]
     <form action="[% ctx.opac_root %]/results" method="GET">
     [%- END %]
-    <div>
-        <span class="search_catalog_lbl">[% l('Search the Catalog') %]</span>
-        <a href="[% mkurl(ctx.opac_root _ '/advanced') %]"
-            id="home_adv_search_link"><span
-            class="adv_search_font">[% l('Advanced Search') %]</span></a>
-    </div>
-    <div class="searchbar">[%- l('Search ');
-        INCLUDE "opac/parts/coded_value_selector.tt2"
-            attr=["mattype", "item_type"] none_ok=1 none_label=l('All Formats');
-            l(' for ');
-        %]
+    <div class="searchbar"><span class="search_catalog_lbl">[% l('Search') %]</span>
         <span class='search_box_wrapper'>
             <input type="text" id="search_box" name="query"
                 value="[% is_advanced ? ctx.naive_query_scrub(ctx.processed_search_query) : CGI.param('query') | html %]"
@@ -27,14 +17,20 @@
                 autofocus x-webkit-speech
                 [%- END # autosuggest enabled %] />
         </span>
-        [%- INCLUDE "opac/parts/qtype_selector.tt2" id="qtype";
-            l(' in '); INCLUDE build_org_selector show_loc_groups=1
-    %]
     <span>
         <input id='search-submit-go' type="submit" value="[% l('Go') %]!" alt="[% l('Go') %]!" class="opac-button"
             onclick='setTimeout(function(){$("search-submit-spinner").className=""; $("search-submit-go").className="hidden"}, 2000)'/>
         <img id='search-submit-spinner' src='/opac/images/progressbar_green.gif' style='height:16px;width:16px;' class='hidden' alt=''/>
     </span>
+        <a href="[% mkurl(ctx.opac_root _ '/advanced') %]"
+            id="home_adv_search_link"><span
+            class="adv_search_font">[% l('Advanced Search') %]</span></a>
+    </div>
+    <div class="searchbar">
+    [%- INCLUDE "opac/parts/coded_value_selector.tt2" attr=["mattype", "item_type"] none_ok=1 none_label=l('All Formats'); %]
+        [%- INCLUDE "opac/parts/qtype_selector.tt2" id="qtype";
+            l(' in '); INCLUDE build_org_selector show_loc_groups=1
+    %]
     </div>
     [% IF ctx.bookbag %]
     <div id="search-only-bookbag-container">

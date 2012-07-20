@@ -29,8 +29,12 @@ a:hover {
 #search-wrapper input[type=text] {
 	margin:0;
 	padding:0;
-	line-height:1.6em;
+	line-height:1.8em;
 	font-size:1.4em;
+	height:1.8em;
+}
+.dijitTextBox {
+	width: 400px;
 }
 
 #search-wrapper select,
@@ -38,7 +42,7 @@ a:hover {
 	border:1px solid #e9ebf3;
 	margin:0;
 	padding:0;
-	width: 12em;
+	width: 14em;
 	font-size:1.4em;
 }
 
@@ -244,9 +248,17 @@ span.dash_divider {
 	background: #f0f2f5;
 }
 
+.searchbar {
+	margin-top:5px;
+	text-align:center;
+}
+
 .search_box_wrapper {
-	width:300px;
+	width:400px;
 	padding: 1px 1px 1px 3px;
+}
+#search_box {
+	width:400px;
 }
 
 #search-wrapper #breadcrumb {
@@ -1013,7 +1025,8 @@ div.result_place_hold {
 	font-size: 10px;
 }
 .search_catalog_lbl {
-	font-size: 1.8em;
+	font-size: 1.6em;
+	vertical-align:middle;
 }
 
 .lbl1 {
