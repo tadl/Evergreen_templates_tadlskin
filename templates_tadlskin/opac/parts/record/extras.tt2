@@ -47,7 +47,7 @@
                         img_url = ctx.media_prefix _ '/images/rdetail_arrow.png';
                     END;
                 %]
-                <a name='[% name %]' href='[% href %]'><img alt='[% extra.label %]' src='[% img_url %]'/></a>
+                <a name='[% name %]' href='[% href %]'></a>
                 <a href='[% href %]' class="rdetail_extras_lbl">[% extra.label %]</a>
             </div>
         </div>
