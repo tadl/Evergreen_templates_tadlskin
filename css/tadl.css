@@ -98,43 +98,45 @@ div.select-wrapper:hover {
 }
 
 #dash_wrapper div {
-	position: relative;
+    position: relative;
     vertical-align: middle;
     background: #ffffff;
     color:#292929;
     border: 1px solid #e6e6e6;
     border-radius: 5px;
     height: 3.5em;
-    padding: 0em 1em 0em 1em;
+    padding: 0em 1em;
 }
 
 span.dash_divider {
     margin: 0em 1em 0em 1em;
-	position: relative;
-    top: 10px;
+    position: relative;
+    top: 15px;
     color: #424242;
 }
 
 #dashboard {
-	clear:both;
-	float:right;
-    margin-top: 1em;
+    clear:both;
+    float:right;
+    margin-top: 5px;
     background: #004677;
     border-radius: 5px;
-    height: 3em;
+    height: 1em;
+    font-size:1.3em;
 }
 
 #dashboard span.dash-align a {
-	color:#424242;
-	font-weight: bold;
-	text-decoration: none;
-	position: relative;
-    top: 10px;
+    color:#424242;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    top: 15px;
 }
 
 #dash_user {
-	font-weight: bold;
-	text-transform: capitalize;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size:1.3em;
     position: relative;
     top: 0px;
 }

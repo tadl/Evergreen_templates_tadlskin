@@ -41,11 +41,11 @@
                 <td>
                     <form action="[% ctx.opac_root %]/myopac/receipt_print" method="POST">
                         <input type="hidden" name="payment" value="[% payment.mp.id %]" />
-                        <input type="submit" value="[% l('Print') %]" />
+                        <input type="submit" value="[% l('Print') %]" class="opac-button" />
                     </form>
                     <form action="[% ctx.opac_root %]/myopac/receipt_email" method="POST">
                         <input type="hidden" name="payment" value="[% payment.mp.id %]" />
-                        <input type="submit" value="[% l('Email') %]" />
+                        <input type="submit" value="[% l('Email') %]" class="opac-button" />
                     </form>
                 </td>
             </tr>
