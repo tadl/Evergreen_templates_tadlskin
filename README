@@ -1,1 +1,20 @@
 TADL Template Toolkit skin
+
+This repository currently contains the TADL template toolkit skin and
+support files.
+
+Focus at present is on the OPAC.
+
+Usage
+=====
+
+These templates can be used by placing them in a directory specified in
+your Apache server's OILSWebTemplatePath variable.
+
+    # Templates will be loaded from the following paths in reverse order.
+    PerlAddVar OILSWebTemplatePath "/openils/var/templates"
+    PerlAddVar OILSWebTemplatePath "/openils/var/templates_tadlskin"
+
+A full copy of the rel_2_2 opac templates has been placed in
+templates_tadlskin for convenience while testing and developing. We'll
+likely remove the unchanged templates at some point.
