@@ -15,7 +15,7 @@ img {
 }
 
 #homesearch_main_logo {
-        padding-top: 60px;
+        padding-top: 30px;
 }
 
 a {
@@ -701,8 +701,8 @@ div.format_icon {
 .content-wrapper-record-page { top: -15px; position: relative; }
 
 #main-content-home {
-	padding-left: 17px;
-    margin-left: 1em;
+    padding-left: 0;
+    margin-left: 0;
 }
 #main-content {
 	padding-left: 0px;
@@ -984,6 +984,7 @@ div.result_place_hold {
 
 .acct_holds_temp td {
 	text-align: left;
+	padding:0 2px;
 }
 
 #acct_checked_tabs .align, 
@@ -1568,3 +1569,10 @@ a.preflib_change {
 .ac_tab_selected a { color: #FFF; }
 #ac_content { clear: both; width: 100%; margin-top: 10px; }
 
+select#qtype,
+select#location_selector {
+    width:auto;
+}
+select#item_type_selector {
+    width:10em;
+}

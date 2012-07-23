@@ -29,7 +29,7 @@
     <div class="searchbar">
         [%- INCLUDE "opac/parts/qtype_selector.tt2" id="qtype"; %]
         [%- INCLUDE "opac/parts/coded_value_selector.tt2" attr=["mattype", "item_type"] none_ok=1 none_label=l('All Formats'); %]
-        [%- INCLUDE build_org_selector show_loc_groups=1 %]
+        [%- INCLUDE build_org_selector show_loc_groups=1 id='location_selector' %]
     </div>
     [% IF ctx.bookbag %]
     <div id="search-only-bookbag-container">
