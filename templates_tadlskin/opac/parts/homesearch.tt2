@@ -1,4 +1,4 @@
 <div id="homesearch_main_logo">
-    <!--<strong><center><img src="[% ctx.media_prefix %]/opac/images/main_logo.png" /></center></strong>-->
+<h1 class="home-header">[% l("New Books"); %]</h1>
 <iframe width="960" height="200" src="http://www.tadl.org/slider/books.php" frameborder="0" marginwidth="5" marginheight="5" scrolling="no" style="background:#F0F2F5;text-align:center"></iframe>
 </div>

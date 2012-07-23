@@ -15,7 +15,7 @@ img {
 }
 
 #homesearch_main_logo {
-        padding-top: 30px;
+        padding-top: 20px;
 }
 
 a {
@@ -64,6 +64,10 @@ h1 {
 	margin-bottom: 5px;
 	font-size: 20px;
 	font-weight:normal;
+}
+
+h1.home-header {
+	padding-left:3em;
 }
 
 h2 {
