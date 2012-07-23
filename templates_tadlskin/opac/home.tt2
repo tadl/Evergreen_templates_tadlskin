@@ -1,5 +1,8 @@
 [%  PROCESS "opac/parts/header.tt2";
     WRAPPER "opac/parts/base.tt2";
+    IF ctx.physical_loc == '23';
+	INCLUDE "opac/parts/inlib_nav.tt2";
+    END;
     INCLUDE "opac/parts/topnav.tt2";
     ctx.page_title = l("Home") %]
     <div id="search-wrapper">
