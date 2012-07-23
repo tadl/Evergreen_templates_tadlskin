@@ -821,6 +821,18 @@ div.format_icon {
 	margin-top: 1em;
 }
 
+tr.result_table_row {
+    background:#fff;
+}
+
+.result_table_pic {
+    padding:10px 5px 10px 0;
+}
+
+tr.result_table_row > td.result_table_title_cell {
+    padding:5px 5px;
+}
+
 tr.result_table_row > td.results_row_count,
 tr.result_table_row > td.result_table_pic_header,
 tr.result_table_row > td.result_table_title_cell {
