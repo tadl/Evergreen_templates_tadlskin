@@ -3,7 +3,7 @@ body {
 	margin:0;
 	font-family: "Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif;
 	font-size: 12px;
-	background: #f0f2f5 url(https://www.tadl.org/sites/all/themes/converge/images/header-top-shadow-bg.png) left top repeat-x;
+	background: #f0f2f5 url(/images/tadl/header-top-shadow-bg.png) left top repeat-x;
 }
 
 img {
@@ -171,7 +171,7 @@ span.dash_divider {
 	padding: 22px 10px 0 10px;
 	margin-left: 0;
 	font-size:11px;
-	background: #f0f2f5 url(https://www.tadl.org/sites/all/themes/converge/images/header-top-shadow-bg.png) left top repeat-x;
+	background: #f0f2f5 url(/images/tadl/header-top-shadow-bg.png) left top repeat-x;
 }
 
 #header a {
@@ -750,7 +750,7 @@ div.format_icon {
 	height:28px;
 	margin:0;
 	padding:0;
-	background:#fff url(https://www.tadl.org/sites/all/themes/converge/images/input-bg.png) left top repeat-x;
+	background:#fff url(/images/tadl/input-bg.png) left top repeat-x;
 	border:1px solid #cdcdcd;
 	color:#333333;
 	font-size: 15px;
@@ -1215,7 +1215,7 @@ div.facet_sidebar {
 }
 
 #footer-wrap {
-	background:url(https://www.tadl.org/sites/all/themes/converge/images/footer-glow-bg.png);
+	background:url(/images/tadl/footer-glow-bg.png);
     background-color: #000000;
 }
 
