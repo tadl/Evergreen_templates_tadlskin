@@ -94,5 +94,4 @@
         </table>
         <input type="submit" value="[% l('Save') %]" alt="[% l('Save') %]" class="opac-button"/>
     </form>
-    [% INCLUDE "opac/parts/myopac/prefs_hints.tt2" %]
 [% END %]
