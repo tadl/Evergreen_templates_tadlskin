@@ -1220,7 +1220,7 @@ div.facet_sidebar {
 
 #footer a {
 	color: #e8e8e8;
-	text-decoration: underline;
+	text-decoration: none;
 	text-shadow: none;
 	font-size:12px;
 }

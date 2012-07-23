@@ -4,7 +4,7 @@
 -%]
 <div id="footer-wrap">
 <div id="footer">
-    <div style="float:right;">
+    <div class="float-right">
     <a href="http://www.tadl.org/">[% l('TADL Home') %]</a><!-- &nbsp;|&nbsp;
     <a href="#">[% l('link text') %]</a> &nbsp;|&nbsp;
     <a href="#">[% l('link text') %]</a> -->
