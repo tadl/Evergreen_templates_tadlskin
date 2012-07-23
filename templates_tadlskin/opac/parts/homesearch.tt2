@@ -1,4 +1,4 @@
 <div id="homesearch_main_logo">
     <!--<strong><center><img src="[% ctx.media_prefix %]/opac/images/main_logo.png" /></center></strong>-->
-<iframe width="960" height="250" src="http://old.tadl.org/slider/index.html" frameborder="0" marginwidth="5" marginheight="5" scrolling="no" style="background:#fff;text-align:center;border:1px solid #e6e6e6;"></iframe>
+<iframe width="960" height="250" src="http://www.tadl.org/slider/index.php" frameborder="0" marginwidth="5" marginheight="5" scrolling="no" style="background:#fff;text-align:center;border:1px solid #e6e6e6;"></iframe>
 </div>
