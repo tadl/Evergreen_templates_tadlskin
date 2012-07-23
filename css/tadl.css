@@ -260,6 +260,7 @@ span.dash_divider {
 .searchbar {
 	margin-top:5px;
 	padding-left:5em;
+	padding-bottom:10px;
 	text-align:left;
 }
 
