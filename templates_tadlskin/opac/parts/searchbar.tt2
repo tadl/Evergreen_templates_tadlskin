@@ -23,7 +23,7 @@
         <img id='search-submit-spinner' src='/opac/images/progressbar_green.gif' style='height:16px;width:16px;' class='hidden' alt=''/>
     </span>
         <a href="[% mkurl(ctx.opac_root _ '/advanced') %]"
-            id="home_adv_search_link"><span
+            id="home_adv_search_link" class="tbutton small tadlblue"><span
             class="adv_search_font">[% l('Advanced Search') %]</span></a>
     </div>
     <div class="searchbar">
