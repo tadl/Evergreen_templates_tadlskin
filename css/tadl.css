@@ -424,7 +424,7 @@ span.dash_divider {
 .rdetail_header {
     padding: 5px 7px 6px 0px;
     margin-left: 1em;
-    border-bottom: 1px dotted #ccc;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .rdetail_results a {
@@ -478,6 +478,7 @@ div.rdetail_show_copies {
 div#rdetail_actions_div {
     float: right;
     background: white;
+    border: 1px solid #e6e6e6;
 }
 
 span#rdetail_copy_counts {
@@ -499,14 +500,13 @@ span#rdetail_hold_counts {
 }
 
 .rdetail_aux_utils {
-	border-left:1px dotted #ccc;
 	padding-left: 17px;
 	padding-bottom: 6px;
 	padding-right: 70px;
 }
 
 div.place_hold {
-    border-bottom: 1px dotted #ccc;
+    border-bottom: 1px solid #e6e6e6;
     padding-top: 10px;
 }
 
@@ -524,7 +524,6 @@ div.format_icon {
 }
 
 .results_aux_utils {
-	border-left:1px dotted #ccc;
 	padding-left: 17px;
 	padding-bottom: 6px;
 	padding-right: 50px;
