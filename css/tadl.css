@@ -11,7 +11,7 @@ img {
 }
 
 #topnav_logo {
-	padding-bottom: 25px;
+	padding-bottom: 10px;
 }
 
 #home_adv_search_link {
@@ -24,7 +24,7 @@ img {
 }
 
 a {
-	color: #616161;
+	color: #323232;
 }
 
 a:hover {
@@ -107,7 +107,7 @@ div.select-wrapper:hover {
 
 #dash_wrapper {
 	position: relative;
-	top:22px;
+//	top:22px;
 }
 
 #dash_wrapper div {
@@ -146,6 +146,9 @@ span.dash_divider {
     top: 15px;
 }
 
+#dash_identity {
+    float:right;
+}
 #dash_user {
     font-weight: bold;
     text-transform: capitalize;
@@ -253,7 +256,7 @@ span.dash_divider {
         width:960px;
         margin:0 auto;
 	border-bottom: 1px solid #e9ebf3;
-	padding-bottom: 5px;
+	padding-bottom: 0;
 	background: #f0f2f5;
 }
 
@@ -1508,7 +1511,7 @@ table.bookbag-specific {
 }
 .common-full-pad {
     clear: both;
-    height: 15px;
+    height: 5px;
 }
 .alert { color: red; }
 .float-left { float: left; }
