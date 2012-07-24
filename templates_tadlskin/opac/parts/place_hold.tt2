@@ -73,28 +73,26 @@
         </p>
         <p>
             [% l('Notify when hold is ready for pickup?') %]
-            <blockquote>
+            <div>
                 <input type="checkbox" name="email_notify" value="t"
                     [% IF ctx.default_email_notify %]checked="checked"[% END %]/>
                     [% l('Yes, by Email') %]<br/>
                 <input type="checkbox" name="phone_notify_checkbox"
                     [% IF ctx.default_phone_notify %]checked="checked"[% END %]/>
-                    [% l('Yes, by Phone') %]<br/>
-                <blockquote>
-                    [% l('Phone Number:') %]<input type="text" name="phone_notify" [% setting = 'opac.default_phone';
+                    [% l('Yes, by Phone.') %] 
+                    [% l('Use this number') %] <input type="text" name="phone_notify" [% setting = 'opac.default_phone';
                     IF ctx.user_setting_map.$setting; %] value='[% ctx.user_setting_map.$setting | html %]'
                     [%- ELSIF ctx.user.day_phone; %] value='[% ctx.user.day_phone | html %]' [% END %]/>
-                </blockquote>
                 [% IF ctx.get_org_setting(ctx.search_ou, 'sms.enable') == 1 %]
                 <input type="checkbox" name="sms_notify_checkbox"
                     [% IF ctx.default_sms_notify %]checked="checked"[% END %]/>
                     [% l('Yes, by Text Messaging') %]<br/>
-                <blockquote>
+                <div>
                     [% INCLUDE "opac/parts/sms_carrier_selector.tt2" %]<br/>
                     [% INCLUDE "opac/parts/sms_number_textbox.tt2" %]<br/>
-                </blockquote>
+                </div>
                 [% END %]
-            </blockquote>
+            </div>
         </p>
         <input type="submit" name="submit" value="[% l('Submit') %]" title="[% l('Submit') %]"
             alt="[% l('Submit') %]" class="opac-button" />
