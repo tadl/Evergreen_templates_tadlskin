@@ -1438,9 +1438,9 @@ a.opac-button {
 .bookbag-controls-holder:nth-child(even) { background-color: #e3e3e3; }
 .bookbag-controls-holder .most {
     padding-left: 0;
-    margin-right: 5em;
+    margin-right: 1em;
 }
-h2.bookbag-name { margin-bottom: 0em; padding-bottom: 0em;width:30em; }
+h2.bookbag-name { margin-bottom: 0em; padding-bottom: 0em;width:28em; }
 .bookbag-share .fixed { min-width: 4em; }
 .bookbag-specific { margin-left: 1em; }
 .bookbag-specific div.sort { float: left; width: 45%; text-align: left; }
