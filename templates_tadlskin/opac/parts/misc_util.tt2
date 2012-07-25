@@ -39,6 +39,8 @@
             FOR sub IN titresults;
                 IF sub.getAttribute('code') == 'a';
                     titresults_content.push(tc.title(sub.textContent));
+		ELSIF sub.getAttribute('code') == 'b';
+                    titresults_content.push(tc.title(sub.textContent));
                 ELSE;
                     titresults_content.push(sub.textContent);
 		END;
@@ -52,6 +54,8 @@
         titsubs_content = [];
             FOR sub IN titsubs;
                 IF sub.getAttribute('code') == 'a';
+                    titsubs_content.push(tc.title(sub.textContent));
+                ELSIF sub.getAttribute('code') == 'b';
                     titsubs_content.push(tc.title(sub.textContent));
                 ELSE;
                     titsubs_content.push(sub.textContent);
