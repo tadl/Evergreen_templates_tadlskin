@@ -36,7 +36,13 @@
         # Include subfields 'abnp' to generate a more comprehensive title display in search results
         titresults = xml.findnodes('//*[@tag="245"]/*[@code="a" or @code="b" or @code="n" or @code="p"]');
         titresults_content = [];
-            FOR sub IN titresults; titresults_content.push(sub.textContent); END;
+            FOR sub IN titresults;
+                IF sub.getAttribute('code') == 'a';
+                    titresults_content.push(tc.title(sub.textContent));
+                ELSE;
+                    titresults_content.push(sub.textContent);
+		END;
+            END;
         args.title = titresults_content.join(" ");
         # Avoid ugly trailing syntax on brief titles
         args.title = args.title | replace('[:;/]$', '');
@@ -44,7 +50,13 @@
         # Provide correct spacing between the subfields
         titsubs = xml.findnodes('//*[@tag="245"]/*[@code]');
         titsubs_content = [];
-            FOR sub IN titsubs; titsubs_content.push(sub.textContent); END;
+            FOR sub IN titsubs;
+                IF sub.getAttribute('code') == 'a';
+                    titsubs_content.push(tc.title(sub.textContent));
+                ELSE;
+                    titsubs_content.push(sub.textContent);
+                END;
+            END;
         args.title_extended = titsubs_content.join(" ");
 
         args.publishers = [];
