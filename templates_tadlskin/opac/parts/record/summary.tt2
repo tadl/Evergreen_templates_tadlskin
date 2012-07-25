@@ -90,7 +90,7 @@ IF num_uris > 0;
     [%- IF num_uris > 1 %]<ul>[% END %]
     [%- FOR uri IN merged_uris %]
         [%- IF num_uris == 1 %]<p class="rdetail_uri">[% ELSE %]<li class="rdetail_uri">[% END %]
-        <a href="[% uri.href %]">[% uri.link %]</a>[% ' - ' _ uri.note IF uri.note %]
+        <a href="[% uri.href %]" class="tbutton medium tadlblue"><span>[% uri.link %]</span></a>[% ' - ' _ uri.note IF uri.note %]
         [%- IF num_uris == 1 %]</p>[% ELSE %]</li>[% END %]
     [%- END %]
     [%- IF num_uris > 1 %]</ul>[% END %]

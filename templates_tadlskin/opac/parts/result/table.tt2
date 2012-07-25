@@ -78,7 +78,7 @@
                                                         [% IF args.ezproxy %]
                                                         <tr name='bib_uri_list' class='result_table_title_cell'>
                                                                 <td valign='top'>
-                                                                        <a href="[% args.uris.0.href %]">[% args.uris.0.link %]</a>
+                                                                        <a href="[% args.uris.0.href %]" class="tbutton small tadlblue"><span>[% args.uris.0.link %]</span></a>
                                                                 </td>
                                                         </tr>
                                                         [% END %]

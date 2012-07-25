@@ -464,7 +464,7 @@ h2.rdetail_uris {
 }
 div.rdetail_uris {
     padding: 0.5em 1em 0.5em 1em;
-    background-color: lightGray;
+    background-color: transparent;
 }
 div.rdetail_uris ul li {
     position: relative;
