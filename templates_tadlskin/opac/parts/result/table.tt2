@@ -75,6 +75,13 @@
                                                             <td>[% args.holdings.0.label | html %]</td>
                                                         </tr>
                                                         [% END %]
+                                                        [% IF args.ezproxy %]
+                                                        <tr name='bib_uri_list' class='result_table_title_cell'>
+                                                                <td valign='top'>
+                                                                        <a href="[% args.uris.0.href %]">[% args.uris.0.link %]</a>
+                                                                </td>
+                                                        </tr>
+                                                        [% END %]
 
                                                         [% IF CGI.param('detail_record_view') %]
                                                         <!-- These fields are visible when viewing the results page in 'detailed' mode -->
@@ -216,6 +223,7 @@
                                             <td nowrap='nowrap' width="1" align="right">
                                                 <div class="result_table_utils_cont">
                                                     <div class="result_table_utils">
+                                                        [% IF !args.ezproxy %]
                                                         <div class="results_aux_utils place_hold"><a
                                                                 href="[% mkurl(ctx.opac_root _ '/place_hold', 
                                                                     {hold_target => rec.id, hold_type => 'T', hold_source_page => mkurl()}) %]" 
@@ -223,6 +231,7 @@
                                                                 src="[% ctx.media_prefix %]/images/green_check.png"
                                                                 alt=""/><span class="result_place_hold">[% l('Place Hold') %]</span></a>
                                                         </div>
+                                                        [% END %]
                                                         <div class="results_aux_utils result_util">
                                                             [%  
                                                                 operation = ctx.mylist.grep(rec.id).size ? "delete" : "add";
