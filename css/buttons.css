@@ -1,0 +1,155 @@
+/* Some Bonus tbutton styling */
+.opac-button,
+.tbutton, .tbutton span {
+  display: inline-block;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.opac-button,
+.tbutton {
+  white-space: nowrap;
+  line-height:1em;
+  position:relative;
+  outline: none;
+  overflow: visible; /* removes extra side padding in IE */
+  cursor: pointer;
+  border: 1px solid #999;/* IE */
+  border: rgba(0, 0, 0, .2) 1px solid;/* Saf4+, Chrome, FF3.6 */
+  border-bottom:rgba(0, 0, 0, .4) 1px solid;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  background: -moz-linear-gradient(
+    center top,
+    rgba(255, 255, 255, .1) 0%,
+    rgba(0, 0, 0, .1) 100%
+  );/* FF3.6 */
+  background: -webkit-gradient(
+    linear,
+    center bottom,
+    center top,
+    from(rgba(0, 0, 0, .1)),
+    to(rgba(255, 255, 255, .1))
+  );/* Saf4+, Chrome */
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000'); /* IE6,IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000')"; /* IE8 */
+  -moz-user-select: none;
+  -webkit-user-select:none;
+  -khtml-user-select: none;
+  user-select: none;
+  margin: 5px;
+}
+.tbutton.full, .tbutton.full span {
+  display: block;
+}
+.opac-button:hover,
+.tbutton:hover, .tbutton.hover {
+  background: -moz-linear-gradient(
+    center top,
+    rgba(255, 255, 255, .2) 0%,
+    rgba(255, 255, 255, .1) 100%
+  );/* FF3.6 */
+  background: -webkit-gradient(
+    linear,
+    center bottom,
+    center top,
+    from(rgba(255, 255, 255, .1)),
+    to(rgba(255, 255, 255, .2))
+  );/* Saf4+, Chrome */
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#33FFFFFF', EndColorStr='#19FFFFFF'); /* IE6,IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#33FFFFFF', EndColorStr='#19FFFFFF')"; /* IE8 */
+}
+.opac-button:active,
+.tbutton:active, .tbutton.active {
+  top:1px;
+  background: -moz-linear-gradient(
+    center top,
+    rgba(0, 0, 0, .1) 0%,
+    rgba(255, 255, 255, .1) 100%
+  );/* FF3.6 */
+  background: -webkit-gradient(
+    linear,
+    center bottom,
+    center top,
+    from(rgba(255, 255, 255, .1)),
+    to(rgba(0, 0, 0, .1))
+  );/* Saf4+, Chrome */
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#19000000', EndColorStr='#19FFFFFF'); /* IE6,IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#19000000', EndColorStr='#19FFFFFF')"; /* IE8 */
+}
+.tbutton:active, .tbutton.active {
+  top:1px;
+}
+.opac-button,
+.tbutton span {
+  position: relative;
+  color:#fff;
+  text-shadow:0 1px 1px rgba(0, 0, 0, 0.25);
+  border-top: rgba(255, 255, 255, .2) 1px solid;
+  padding:0.6em 1.3em;
+  line-height:1em;
+  text-decoration:none;
+  text-align:center;
+  white-space: nowrap;
+  font-size:14px;
+}
+a.tbutton, a.tbutton:link, a.tbutton:active, a.tbutton:hover, a.tbutton:focus, a.tbutton:visited {
+  text-decoration:none;
+}
+/*** Different Sizes ***/
+.opac-button,
+.opac-button:hover,
+.opac-button:active,
+.tbutton.small span {
+  font-size:12px;
+}
+.tbutton.medium span {
+  font-size:14px;
+}
+.tbutton.large span {
+  font-size:18px;
+}
+/*** Different Colors ***/
+.tbutton.cyan {
+  background-color:#46C7C7;
+}
+.tbutton.blue {
+  background-color:#00ADEE;
+}
+.tbutton.black {
+  background-color:#333333;
+}
+.tbutton.green {
+  background-color:#91BD09;
+}
+.tbutton.orange {
+  background-color:#FF5C00;
+}
+.tbutton.pink {
+  background-color:#E22092;
+}
+.tbutton.purple {
+  background-color:#800080;
+}
+.tbutton.red {
+  background-color:#E62727;
+}
+.tbutton.white {
+  background-color:#ffffff;
+}
+.tbutton.white span {
+  color:#666666;
+}
+.tbutton.gray {
+  background-color:#666666;
+}
+.tbutton.yellow {
+  background-color:#FFB515;
+}
+.opac-button,
+.opac-button:hover,
+.opac-button:active,
+.tbutton.tadlblue {
+  background-color:#004677;
+}
