@@ -4,6 +4,7 @@
         [%  # Hidden extras are not yet implemented.  Some may require JS
 
         MACRO tab_is_active(tab) BLOCK;
+            IF tab == 'addedcontent'; 1; END;
             exp_name = 'expand_' _ tab;
             IF ctx.$exp_name OR ctx.expand_all; 1; END;
         END;
@@ -38,7 +39,6 @@
             {name => 'summaryplus',  label => l('Summaries &amp; More'), hide => hide_summary}, 
             {name => 'contents',  label => l('Contents'), hide => !attrs.contents},
             {name => 'annotation', label => l('Annotation'), hide => 1}, 
-            {name => 'awards',  label => l('Awards, Reviews, & Suggested Reads')}, 
             {name => 'excerpt',  label => l('Excerpt'), hide => 1},
             {name => 'issues',   label => l('Issues Held'), hide => !(ctx.have_holdings_to_show || ctx.have_mfhd_to_show)},
             {name => 'preview',  label => l('Preview'), hide => 1}, 
