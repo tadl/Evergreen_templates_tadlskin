@@ -100,6 +100,11 @@
                 <td class='light_border'>[% ctx.user.email | html %]</td>
                 <td class='light_border'><a href='update_email'>[% l('Change') %]</a></td>
             </tr>
+            <tr>
+                <td class='color_4 light_border'>[% l("Holdshelf Alias") %]</td>
+                <td class='light_border'>[% ctx.user.alias | html %]</td>
+                <td class='light_border'><a href='update_alias'>[% l('Change') %]</a></td>
+            </tr>
 
             [% IF ctx.user.ident_value %]<tr class="hide_me">
                 <td class='color_4 light_border'>
