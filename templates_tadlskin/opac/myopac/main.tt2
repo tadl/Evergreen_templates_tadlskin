@@ -182,9 +182,7 @@
     [% END %]
     [% IF ctx.fines.grocery.size OR ctx.fines.circulation.size %]
     <div class="pad-top-ten">
-        <form action="https://www.tadl.org/pay/pay.cgi" method="POST">
-        <input type="submit" class="opac-button" value="Pay fines online" />
-        </form>
+        <a href="https://www.tadl.org/go/pay" class="tbutton small tadlblue"><span>Pay fines online</span></a>
     </div>
     [% END %]
 </form>
