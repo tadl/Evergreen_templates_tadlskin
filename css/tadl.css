@@ -1577,8 +1577,8 @@ a.preflib_change {
 }
 
 #ac_tab_wrapper { width : 100%; }
-.ac_tab { float: left; padding-right: 10px; font-size: 110%; padding: 5px; border: 1px solid #417860; }
-.ac_tab_selected { background-color: #417860; }
+.ac_tab { float: left; padding-right: 10px; font-size: 110%; padding: 5px; border: 1px solid #004677; }
+.ac_tab_selected { background-color: #004677; }
 .ac_tab_selected a { color: #FFF; }
 #ac_content { clear: both; width: 100%; margin-top: 10px; }
 
@@ -1589,3 +1589,8 @@ select#location_selector {
 select#item_type_selector {
     width:10em;
 }
+
+/* trim some extra bits from ac content */
+div.ac > b { display: none; }
+div.ac > table[align="center"] { display: none; }
+div.ac > table { display: none; }
