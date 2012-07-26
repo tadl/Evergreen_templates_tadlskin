@@ -180,10 +180,13 @@
             class="opac-button" />
     </div>
     [% END %]
-    [% IF ctx.fines.grocery.size OR ctx.fines.circulation.size %]
-    <div class="pad-top-ten">
-        <a href="https://www.tadl.org/go/pay" class="tbutton small tadlblue"><span>Pay fines online</span></a>
-    </div>
-    [% END %]
 </form>
+[% IF ctx.fines.grocery.size OR ctx.fines.circulation.size %]
+<div class="pad-top-ten">
+<form method="POST" action="https://www.tadl.org/pay/pay.cgi">
+<input type="hidden" name="ses" value="[% ctx.authtoken %]" />
+<span class="tbutton small tadlblue"><input type="submit" class="tbutton small tadlblue" value="Pay fines online" /></span>
+</form>
+</div>
+[% END %]
 [% END %]
