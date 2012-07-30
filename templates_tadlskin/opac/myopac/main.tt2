@@ -185,7 +185,7 @@
 <div class="pad-top-ten">
 <form method="POST" action="https://www.tadl.org/pay/pay.cgi">
 <input type="hidden" name="ses" value="[% ctx.authtoken %]" />
-<span class="tbutton small tadlblue"><input type="submit" class="tbutton small tadlblue" value="Pay fines online" /></span>
+<input type="submit" class="opac-button" value="Pay fines online" />
 </form>
 </div>
 [% END %]
