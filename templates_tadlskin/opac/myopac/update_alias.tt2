@@ -1,0 +1,32 @@
+[%  PROCESS "opac/parts/header.tt2";
+    PROCESS "opac/parts/misc_util.tt2";
+    WRAPPER "opac/parts/myopac/base.tt2";
+    myopac_page = "prefs"  %]
+<div id='myopac_summary_div' style="padding:0px;">
+
+[% IF ctx.alias_exists %]
+    <div id='account-update-alias-error'>
+        [% bad_alias = ctx.alias_exists | html %]
+        [% | l(bad_alias) %]
+        The alias "<b>[_1]</b>" is taken.  Please try a different alias.
+        [% END %]
+    </div>
+
+[% ELSIF ctx.password_incorrect %]
+    <div id='account-update-alias-error'>
+        [% |l %] Your current password was not correct. [% END %]
+    </div>
+
+[% END %]
+
+<form method='POST' id='account-update-alias'> 
+    <table> 
+        <tr><td>[% l('Current Alias') %]</td><td>[% ctx.user.alias | html %]</td></tr>
+        <tr><td>[% l('Current Password') %]</td><td><input type='password' name='current_pw'/></td></tr>
+        <tr><td>[% l('New Alias') %]</td><td><input type='text' name='alias' value='[% ctx.invalid_alias | html %]'/></td></tr>
+        <tr><td colspan='2' align='center'><input value="[% l('Submit') %]" type='submit' class='opac-button' /></td></tr>
+    </table>
+</form>
+</div>
+
+[% END %]
