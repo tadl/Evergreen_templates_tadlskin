@@ -1,4 +1,14 @@
 
+[%
+item_type_override = {
+    'a' => 'Books',
+    'i' => 'Audiobooks',
+    'g' => 'Video Recordings',
+    'j' => 'Music',
+    'm' => 'Electronic Resources',
+};
+%]
+
 [%- 
     # If caller passes a list of possible attribute types, 
     # search all until we find some values
@@ -10,6 +20,17 @@
         all_values = ctx.search_ccvm('ctype', attr_class);
         IF all_values.size > 0; LAST; END;
     END;
+
+    new_all_values = [];
+    IF attr_class == 'item_type';
+        FOR db_value IN all_values;
+            IF item_type_override.${db_value.code};
+                new_all_values.push( {'code'=>db_value.code, 'value'=> item_type_override.${db_value.code}} );
+            END;
+         END;
+        all_values = new_all_values;
+    END;
+
     name = name || "fi:" _ attr_class;
     id = id || attr_class _ "_selector";
     values = values || CGI.param(name); 
