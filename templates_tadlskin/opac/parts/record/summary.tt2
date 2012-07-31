@@ -14,11 +14,9 @@
 [%-# This holds the record summary information %]
 <div id="rdetail_summary_header">
     <div id="rdetail_image_div">
-        [% ident = attrs.isbn_clean || attrs.upc; IF ident; %]
         <a href='[% ctx.media_prefix %]/opac/extras/ac/jacket/large/r/[% ctx.bre_id | uri %]'><img
             alt="[% l('Image of item') %]" id='rdetail_image'
             src='[% ctx.media_prefix %]/opac/extras/ac/jacket/[% record.summary.jacket_size %]/r/[% ctx.bre_id | uri %]' /></a>
-        [% END %]
         <br />
     </div>
 
