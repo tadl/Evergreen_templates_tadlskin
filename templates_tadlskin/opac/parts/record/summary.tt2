@@ -16,6 +16,7 @@
     <div id="rdetail_image_div">
         <a href='[% ctx.media_prefix %]/opac/extras/ac/jacket/large/r/[% ctx.bre_id | uri %]'><img
             alt="[% l('Image of item') %]" id='rdetail_image'
+            onerror="this.style.display='none';"
             src='[% ctx.media_prefix %]/opac/extras/ac/jacket/[% record.summary.jacket_size %]/r/[% ctx.bre_id | uri %]' /></a>
         <br />
     </div>

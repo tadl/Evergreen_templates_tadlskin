@@ -35,6 +35,7 @@
                             IF ident %]
                         <a href="[% mkurl(ctx.opac_root _ '/record/' _ cn.record.id, {}, 1) %]"><img height='60' width='50' 
                             class='cn_browse_info' name='cn_browse_pic' border='0'
+                            onerror='this.style.display="none";'
                             src="[% ctx.media_prefix %]/opac/extras/ac/jacket/small/r/[% cn.record.id | uri %]" /></a>
                         [% END %]
                         <div class='cn_browse_info bold' name='cn_browse_cn'>[% cn.label | html %]</div>
