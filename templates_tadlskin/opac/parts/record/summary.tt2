@@ -41,9 +41,6 @@
             </a>
         </div>
         <div class="rdetail_aux_utils">
-            <img src="[% ctx.media_prefix %]/images/clipboard.png" alt="" />
-            <a href="[% mkurl(ctx.opac_root _ '/record/print/' _ ctx.bre_id) %]" class="no-dec">[% l('Print') %]</a> /
-            <a href="[% mkurl(ctx.opac_root _ '/record/email/' _ ctx.bre_id) %]" class="no-dec">[% l('Email') %]</a>
         </div>
     </div>
     <div id='rdetail_title_div'>
