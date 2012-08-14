@@ -1418,7 +1418,7 @@ a.opac-button {
 .success { color: green; font-weight: bold; }
 
 .rdetail_related_subjects {
-    margin-top: 1.5em;
+    margin-top: 1em;
 }
 
 .rdetail_related_series {
@@ -1515,6 +1515,8 @@ table.bookbag-specific {
 .alert { color: red; }
 .float-left { float: left; }
 .float-right { float: right; }
+.padding-ten { padding: 10px; }
+.padding-twenty { padding: 20px; }
 
 .saved-searches-header { width: 100%; font-weight: bold; font-size: 120%; }
 .saved-searches-header .button { float: right; width: 28px; }
