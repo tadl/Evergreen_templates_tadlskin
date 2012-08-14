@@ -146,7 +146,6 @@
         <thead>
             <tr>
                 <td><strong>[% l("Addresses") %]</strong></td>
-                <td><strong>[% l("Pending Addresses") %]</strong></td>
             </tr>
         </thead>
         <tbody>
