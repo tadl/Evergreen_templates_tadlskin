@@ -5,6 +5,11 @@
         depth = 0;
         displayed_ous = {};
         WHILE depth < depths;
+            # TADL hack to hide counts for top of tree
+            IF ctx.copy_summary.$depth.org_unit == 1;
+                depth = depth + 1;
+                NEXT;
+            END;
             ou_avail = ctx.copy_summary.$depth.available;
             ou_id = ctx.copy_summary.$depth.org_unit;
             cp_org_unit = ctx.get_aou(ou_id);

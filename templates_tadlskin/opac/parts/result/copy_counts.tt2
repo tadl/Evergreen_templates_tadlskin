@@ -2,6 +2,11 @@
     depth = 0;
     displayed_ous = {};
     WHILE depth < depths;
+        # TADL hack to hide counts for top of tree
+	IF attrs.copy_counts.$depth.org_unit == 1;
+            depth = depth + 1;
+            NEXT;
+	END;
         ou_name = ctx.get_aou(attrs.copy_counts.$depth.org_unit).name;
         displayed_ous.$ou_name = 1;
         IF attrs.copy_counts.$depth.count > 0;
