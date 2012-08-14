@@ -3,6 +3,6 @@
 <iframe width="960" height="240" src="https://www.tadl.org/slider/books.php" frameborder="0" marginwidth="5" marginheight="5" scrolling="no" style="background:#F0F2F5;text-align:center"></iframe>
 <h1 class="home-header">[% l("Featured Music"); %]</h1>
 <iframe width="960" height="200" src="https://www.tadl.org/slider/music.php" frameborder="0" marginwidth="5" marginheight="5" scrolling="no" style="background:#F0F2F5;text-align:center"></iframe>
-<h1 class="home-header">[% l("Featured Movies"); %]</h1>
+<h1 class="home-header">[% l("Featured Video"); %]</h1>
 <iframe width="960" height="240" src="https://www.tadl.org/slider/video.php" frameborder="0" marginwidth="5" marginheight="5" scrolling="no" style="background:#F0F2F5;text-align:center"></iframe>
 </div>
