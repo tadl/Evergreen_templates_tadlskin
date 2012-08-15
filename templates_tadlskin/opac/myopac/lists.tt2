@@ -124,7 +124,7 @@
                         {page => '0', bookbag => bbag.id, depth => 0, locg => ctx.search_ou},
                         1
                     )
-                -%]' class='tbutton small tadlblue'><span>[% l('HTML') %]</span></a>
+                -%]' class='tbutton small tadlblue'><span>[% l('View') %]</span></a>
                 [% END %]
             </div>
             <div class="clear-both pad-bottom-five"></div>
@@ -270,10 +270,10 @@
     [% END %]
 
     <span id='bb_publish_text' class='hide_me'>
-[% |l %]Sharing a Bookbag means that the contents 
-of the Bookbag will be visible to others.  
-To see the public view of a shared Bookbag, 
-click on the Bookbag's name in the Bookbag list.[% END %]
+[% |l %]Sharing a List means that the contents 
+of the list will be visible to others.  
+To see the public view of a shared list, 
+click on the 'View' button for that list.[% END %]
     </span>
 </div>
 [% END %]
