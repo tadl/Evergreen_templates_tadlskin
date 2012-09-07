@@ -34,7 +34,7 @@
     [% IF ctx.bookbag %]
     <div id="search-only-bookbag-container">
         <input type="checkbox" id="search-only-bookbag" name="bookbag"
-            value="[% ctx.bookbag.id | html %]" checked="checked" />
+            value="[% ctx.bookbag.id | html %]" />
         <label for="search-only-bookbag">
             [% l('Search only within the chosen list') %]
         </label>
