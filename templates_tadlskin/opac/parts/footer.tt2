@@ -37,9 +37,17 @@ var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.tadl.or
 document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
 </script><script type="text/javascript">
 try {
+[% IF ctx.is_staff %]
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 10);
+[% ELSE %]
 var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 9);
+[% END %]
 piwikTracker.trackPageView();
 piwikTracker.enableLinkTracking();
 } catch( err ) {}
+[% IF ctx.is_staff %]
+</script><noscript><p><img src="https://www.tadl.org/piwik/piwik.php?idsite=10" style="border:0" alt="" /></p></noscript>
+[% ELSE %]
 </script><noscript><p><img src="https://www.tadl.org/piwik/piwik.php?idsite=9" style="border:0" alt="" /></p></noscript>
+[% END %]
 <!-- End Piwik Tracking Code -->
