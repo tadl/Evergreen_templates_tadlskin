@@ -1585,6 +1585,7 @@ a.preflib_change {
 #ac_content { clear: both; width: 100%; margin-top: 10px; }
 
 select#qtype,
+select#item_format_selector,
 select#location_selector {
     width:auto;
 }

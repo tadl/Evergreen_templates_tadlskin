@@ -1,0 +1,31 @@
+
+[%
+# These are displayed in the order shown
+item_formats = [
+    { 'code' => 'at', 'value' => 'Books' },
+    { 'code' => 'at-d', 'value' => 'Large Print Books' },
+    { 'code' => 'at-s', 'value' => 'E-Books' },
+    { 'code' => 'i', 'value' => 'Audiobooks' },
+    { 'code' => 'g', 'value' => 'Video Recordings' },
+    { 'code' => 'j', 'value' => 'Music' },
+    { 'code' => 'm', 'value' => 'Electronic Resources' },
+];
+%]
+
+[%-
+    name = "fi:format";
+    id = "item_format_selector";
+    values = values || CGI.param(name);
+-%]
+
+<select id='[% id %]' name='[% name %]'[%
+    multiple ? ' multiple="multiple"' : '';
+    size ? (' size="' _ size _ '"') : ''; %]>
+[% IF none_ok %]
+    <option value=''>[% none_label ? none_label : l('-- Any --') %]</option>
+[% END;
+FOR o IN item_formats; %]
+    <option value='[% o.code | uri %]'[% values.grep('^' _ o.code _ '$').size ? ' selected="selected"' : '' %]>[% o.value | html %]</option>
+[%  END -%]
+</select>
+
