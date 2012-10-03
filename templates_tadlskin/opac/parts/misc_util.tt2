@@ -202,9 +202,9 @@
                     args.uris.push(res);
                     IF res.href.match('^http://via.tadl.org/');
                         args.ezproxy = 1;
-                    END;
-                    IF (avod_xtid = res.href.match('^http://via.tadl.org/login\?url=http://avod.films.com/PortalPlaylists.aspx\?aid=\d+&xtid=(\d+)'));
-                        args.cover_url = 'https://secure.films.com/Common/FMGimages/' _ avod_xtid.0 _ '_full.jpg';
+                        IF (avod_xtid = res.href.match('url=http://avod.films.com/PortalPlaylists.aspx\?aid=\d+&xtid=(\d+)'));
+                            args.cover_url = 'https://secure.films.com/Common/FMGimages/' _ avod_xtid.0 _ '_full.jpg';
+                        END;
                     END;
                 END;
                 NEXT;
