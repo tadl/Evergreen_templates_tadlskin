@@ -14,10 +14,19 @@
 [%-# This holds the record summary information %]
 <div id="rdetail_summary_header">
     <div id="rdetail_image_div">
-        <a href='[% ctx.media_prefix %]/opac/extras/ac/jacket/large/r/[% ctx.bre_id | uri %]'><img
+	[%
+		bre_id_urisafe = ctx.bre_id | uri;
+		IF args.cover_url;
+			jacket_src = args.cover_url;
+		ELSE;
+			jacket_src = ctx.media_prefix _ '/opac/extras/ac/jacket/' _ record.summary.jacket_size _ '/r/' _ bre_id_urisafe;
+			jacket_href = ctx.media_prefix _ '/opac/extras/ac/jacket/large/r/' _ bre_id_urisafe; 
+		END;
+	 %]
+        [% IF jacket_href %]<a href='[% jacket_href | html %]'>[% END %]<img
             alt="[% l('Image of item') %]" id='rdetail_image'
             onerror="this.style.display='none';"
-            src='[% ctx.media_prefix %]/opac/extras/ac/jacket/[% record.summary.jacket_size %]/r/[% ctx.bre_id | uri %]' /></a>
+            src='[% jacket_src | html %]' />[% IF jacket_href %]</a>[% END %]
         <br />
     </div>
 
