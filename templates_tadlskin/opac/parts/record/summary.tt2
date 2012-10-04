@@ -60,6 +60,11 @@
         [%- END %]
         <h1 id='rdetail_title' itemprop="name">[% attrs.title_extended | html %]</h1>
         [%- INCLUDE "opac/parts/record/authors.tt2" %]
+	<div id='rdetail_summary_from_rec' class='float-left'>
+	[%- FOREACH summary IN args.summaries %]
+	<p>[% summary %]</p>
+	[%- END %]
+	</div>
     </div>
 </div>
 
