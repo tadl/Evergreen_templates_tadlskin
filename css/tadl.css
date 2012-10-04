@@ -497,6 +497,7 @@ span#rdetail_hold_counts {
 #rdetail_image_div {
     float: left;
     margin-right: 1em;
+    min-height: 190px;
 }
 
 .rdetail_aux_utils {
