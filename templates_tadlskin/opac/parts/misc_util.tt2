@@ -204,6 +204,7 @@
                         args.ezproxy = 1;
                         IF (avod_xtid = res.href.match('url=http://avod.films.com/PortalPlaylists.aspx\?aid=\d+&xtid=(\d+)'));
                             args.cover_url = 'https://secure.films.com/Common/FMGimages/' _ avod_xtid.0 _ '_full.jpg';
+                            args.widget_html = "<iframe height='310' frameborder='0' width='348' src='https://www.tadl.org/avod/play.cgi?xtid=" _ avod_xtid.0 _ "'  >&nbsp;</iframe>";
                         END;
                     END;
                 END;
