@@ -22,11 +22,22 @@
 			jacket_src = ctx.media_prefix _ '/opac/extras/ac/jacket/' _ record.summary.jacket_size _ '/r/' _ bre_id_urisafe;
 			jacket_href = ctx.media_prefix _ '/opac/extras/ac/jacket/large/r/' _ bre_id_urisafe; 
 		END;
+
+		IF args.widget_html;
+			jacket_href = mkurl(ctx.opac_root _ '/login');
+            login_teaser = "Resident patrons click here to view content";
+		END;
 	 %]
-        [% IF jacket_href %]<a href='[% jacket_href | html %]'>[% END %]<img
+
+    [% IF args.widget_html && ctx.user %]
+	[% args.widget_html %]
+    [% ELSE %]
+        [% IF jacket_href %]<a href='[% jacket_href | html %]'>[% END %]
+            [% IF login_teaser %]<p>[% login_teaser %]</p>[% END %]<img
             alt="[% l('Image of item') %]" id='rdetail_image'
             onerror="this.style.display='none';"
             src='[% jacket_src | html %]' />[% IF jacket_href %]</a>[% END %]
+    [% END %]
         <br />
     </div>
 
