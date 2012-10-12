@@ -1,6 +1,9 @@
 [% IF !ctx.is_staff %]
 <div id="header-wrap">
 <div id="header">
+    [% IF ctx.user && !CGI.cookie('ezproxy') %]
+    <iframe style="display: none;" height="1" width="1" src="https://www.tadl.org/proxyvia/login?url=http://via.tadl.org/loggedin/login.html"></iframe>
+    [% END %]
     <div class="float-left">
         [% INCLUDE "opac/parts/topnav_logo.tt2" %]
     </div>
