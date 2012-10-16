@@ -7,7 +7,7 @@ authors = [
         xpath => '//*[@tag="100"]|//*[@tag="110"]|//*[@tag="111"]'
     }, {
         type => 'added', 
-        label => l('Added Author'),
+        label => l('Added Entry'),
         xpath => '//*[@tag="700"]|//*[@tag="710"]|//*[@tag="711"]'
     }, {
         type => 'credits', 

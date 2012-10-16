@@ -69,7 +69,7 @@
             <img alt="[% attrs.format_label %]" title="[% attrs.format_label | html %]" src="[% attrs.format_icon %]" />
         </div>
         [%- END %]
-        <h1 id='rdetail_title' itemprop="name">[% attrs.title_extended | html %]</h1>
+        <h1 id='rdetail_title' itemprop="name">[% attrs.title | html %]</h1>
         [%- INCLUDE "opac/parts/record/authors.tt2" %]
 	<div id='rdetail_summary_from_rec'>
 	[%- FOREACH summary IN args.summaries %]
