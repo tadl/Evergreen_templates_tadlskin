@@ -12,7 +12,11 @@
         <div id="your-acct-login">
             <a href="[% mkurl(ctx.opac_root _ '/myopac/main') %]" 
                 class="tbutton medium tadlblue" id="home_myopac_link"><span>
-                [% l('Your Account Log in') %]
+                [% l('My Account') %]
+            </span></a>
+            <a href="https://www.tadl.org/register"
+                class="tbutton medium tadlblue" id="home_register_link"><span>
+                [% l('Register') %]
             </span></a>
         </div>
         [% ELSE %]
