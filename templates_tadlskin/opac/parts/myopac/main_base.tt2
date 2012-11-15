@@ -45,6 +45,14 @@
             type="submit" title="[% l('Pay Fines') %]" alt="[% l('Pay Fines') %]"
             value="[% l('Pay Fines') %]" class="pos-rel-top-5 opac-button" /></form>
         [% END %]
+	<div style="padding: 1em; background-color: white;">
+	[% IF ctx.user.alias %]
+		<p>Your holdshelf alias is currently set to: "[% ctx.user.alias %]".</p>
+	[% ELSE %]
+		<p>You do not currently have a holdshelf alias set.</p>
+	[% END %]
+		<p><a href="[% mkurl(ctx.opac_root _ '/myopac/update_alias') %]">change</a> - <a href="http://www.tadl.org/lobbyupdate">what's an alias?</a></p>
+	</div>
     </div>
     [% END %]
 
