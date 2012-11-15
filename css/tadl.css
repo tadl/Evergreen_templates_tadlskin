@@ -500,9 +500,8 @@ span#rdetail_hold_counts {
 }
 
 .rdetail_aux_utils {
-	padding-left: 17px;
-	padding-bottom: 6px;
-	padding-right: 70px;
+	padding: 2px;
+	width: 242px;
 }
 
 div.place_hold {

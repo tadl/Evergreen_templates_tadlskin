@@ -38,7 +38,7 @@
   -webkit-user-select:none;
   -khtml-user-select: none;
   user-select: none;
-  margin: 5px;
+  margin: 5px 0 0 5px;
 }
 .tbutton.full, .tbutton.full span {
   display: block;
