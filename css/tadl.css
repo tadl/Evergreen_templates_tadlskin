@@ -508,6 +508,7 @@ span#rdetail_hold_counts {
 .rdetail_aux_holdcounts {
 	padding: 5px 10px 0 10px;
 	margin: 0;
+	font-size:1.3em;
 }
 
 div.place_hold {

@@ -43,11 +43,11 @@
 
     <div id="rdetail_actions_div">
 	[% IF !args.ezproxy %]
-				<div class="rdetail_aux_utils" style="margin:0; padding:0 10px;">
+				<div class="rdetail_aux_utils rdetail_aux_copycounts">
 					[%- INCLUDE "opac/parts/record/copy_counts.tt2" %]
 				</div>
-				<div class="rdetail_aux_utils" style="margin:0; padding:0 10px;">
-            [%- l("[quant,_1,hold,holds] with [quant,_2,copy,copies].", 
+				<div class="rdetail_aux_utils rdetail_aux_holdcounts">
+            [%- l("[quant,_1,hold,holds] on [quant,_2,copy,copies].", 
                 ctx.record_hold_count, ctx.copy_summary.0.count) %]
 				</div>
         <div class="rdetail_aux_utils">
