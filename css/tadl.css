@@ -530,13 +530,13 @@ div.format_icon {
 }
 
 .results_aux_utils {
-	padding-left: 17px;
+	float:right;
+	padding-left: 27px;
 	padding-bottom: 6px;
-	padding-right: 50px;
+	padding-right: 10px;
 }
 
 .result_util {
-    border-bottom: 1px dotted #ccc;
     padding-top: 6px;
 }
 

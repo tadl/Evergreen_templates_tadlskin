@@ -232,25 +232,23 @@
                                                 <div class="result_table_utils_cont">
                                                     <div class="result_table_utils">
                                                         [% IF !args.ezproxy %]
-                                                        <div class="results_aux_utils place_hold"><a
+                                                        <div class="results_aux_utils result_util"><a
                                                                 href="[% mkurl(ctx.opac_root _ '/place_hold', 
                                                                     {hold_target => rec.id, hold_type => 'T', hold_source_page => mkurl()}) %]" 
-                                                                    name="place_hold_link" class="no-dec"><img
-                                                                src="[% ctx.media_prefix %]/images/green_check.png"
-                                                                alt=""/><span class="result_place_hold">[% l('Place Hold') %]</span></a>
-                                                        </div>
+                                                                    name="place_hold_link" class="tbutton small green">
+                                                                <span>[% l('Place Hold') %]</span></a>
+                                                        <!--</div>-->
                                                         [% END %]
-                                                        <div class="results_aux_utils result_util">
+                                                        <!--<div class="results_aux_utils result_util">--><br />
                                                             [%  
                                                                 operation = ctx.mylist.grep(rec.id).size ? "delete" : "add";
-                                                                label = (operation == "add") ? l("Add to my list") : l("Remove from my list");
+                                                                label = (operation == "add") ? l("Add to list") : l("Remove from list");
                                                                 href = mkurl(ctx.opac_root _ '/mylist/' _ operation, 
                                                                         {record => rec.id, anchor => 'record_' _ rec.id}, 1);
                                                             %]      
-                                                            <a href="[% href %]" class="no-dec">
-                                                                <img src="[% ctx.media_prefix %]/images/clipboard.png" alt="" />
+                                                            <a href="[% href %]" class="tbutton small tadlblue"><span>
                                                                 [% label %]
-                                                            </a>
+                                                            </span></a>
                                                         </div>
                                                         [% IF ENV.OILS_CONTENT_CAFE_USER %]
                                                         <div class="results_aux_utils result_util">
