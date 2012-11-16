@@ -26,6 +26,7 @@ FOREACH copy_info IN copies;
 END;
 -%]
 [%- IF has_copies; %]
+<div style="clear:both;">
 <table cellpadding="0" cellspacing="0" border="0" width="100%" id="rdetails_status">
     <thead>
         <tr>
@@ -38,7 +39,9 @@ END;
             [%- IF has_parts == 'true' %]
             <th id='copy_header_part'>[% l("Part") %]</th>
             [%- END %]
+            [%- IF ctx.is_staff -%]
             <th id='copy_header_barcode'>[% l("Barcode") %]</th>
+            [%- END %]
             <th id='copy_header_shelfloc'>[% l("Shelving Location") %]</th>
             [%- IF ctx.is_staff %]
             <th id='copy_header_age_hold'>[% l("Age Hold Protection") %]</th>
@@ -81,11 +84,10 @@ END;
             [%- IF has_parts == 'true' %]
             <td header='copy_header_part'>[% copy_info.part_label | html %]</td>
             [%- END %]
-            <td header='copy_header_barcode'>
                 [%- IF ctx.is_staff -%]
+            <td header='copy_header_barcode'>
                     <a href="javascript:void(0)" onclick="xulG.new_tab(xulG.urls.XUL_COPY_STATUS, {}, {'from_item_details_new': true, 'barcodes': ['[%- copy_info.barcode | html | replace('\'', '\\\'') -%]']})">[% copy_info.barcode | html %]</a>
-                [%- ELSE -%][% copy_info.barcode | html %]
-                [%- END -%]</td>
+                </td>[%- END -%]
             <td header='copy_header_shelfloc'>[% copy_info.copy_location | html %]</td>
             [%- IF ctx.is_staff %]
             <td header='copy_header_age_hold'>
@@ -178,4 +180,5 @@ END;
         [%- END %]
     </tbody>
 </table>
+</div>
 [% END; %]

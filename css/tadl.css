@@ -504,6 +504,12 @@ span#rdetail_hold_counts {
 	width: 242px;
 }
 
+.rdetail_aux_copycounts,
+.rdetail_aux_holdcounts {
+	padding: 5px 10px 0 10px;
+	margin: 0;
+}
+
 div.place_hold {
     border-bottom: 1px solid #e6e6e6;
     padding-top: 10px;

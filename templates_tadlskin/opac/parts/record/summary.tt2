@@ -43,6 +43,13 @@
 
     <div id="rdetail_actions_div">
 	[% IF !args.ezproxy %]
+				<div class="rdetail_aux_utils" style="margin:0; padding:0 10px;">
+					[%- INCLUDE "opac/parts/record/copy_counts.tt2" %]
+				</div>
+				<div class="rdetail_aux_utils" style="margin:0; padding:0 10px;">
+            [%- l("[quant,_1,hold,holds] with [quant,_2,copy,copies].", 
+                ctx.record_hold_count, ctx.copy_summary.0.count) %]
+				</div>
         <div class="rdetail_aux_utils">
             <a href="[% mkurl(ctx.opac_root _ '/place_hold', 
                 {hold_target => ctx.bre_id, hold_type => 'T', hold_source_page => mkurl()}, stop_parms) %]" 
@@ -117,13 +124,7 @@ IF num_uris > 0;
     IF ctx.copy_summary.0.count
 %]
 <div id="copy_hold_counts">
-[%- INCLUDE "opac/parts/record/copy_counts.tt2" %]
     <span id="rdetail_hold_counts">
-        <h2>[% l('Current holds') %]</h2>
-        <p>
-            [%- l("[quant,_1,current hold,current holds] with [quant,_2,total copy,total copies].", 
-                ctx.record_hold_count, ctx.copy_summary.0.count) %]
-        </p>
     </span>
 [%- INCLUDE "opac/parts/record/copy_table.tt2" copies=ctx.copies %]
 </div>
