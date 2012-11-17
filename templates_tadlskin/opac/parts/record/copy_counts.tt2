@@ -35,6 +35,10 @@
 
         depth = attrs.plib_copy_counts.size - 1;
         ou_name = ctx.get_aou(attrs.plib_copy_counts.$depth.org_unit).name;
+        ou_shortname = ctx.get_aou(attrs.plib_copy_counts.$depth.org_unit).shortname;
+        IF tadlskin.ou_display_names.exists(ou_shortname);
+            ou_name = tadlskin.ou_display_names.$ou_shortname;
+        END;
         ou_id = attrs.plib_copy_counts.$depth.org_unit;
         UNLESS depth < 0 || displayed_ous.exists(ou_name);
     %]
