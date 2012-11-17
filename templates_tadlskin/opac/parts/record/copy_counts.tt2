@@ -1,4 +1,5 @@
-    [%- depths = ctx.copy_summary.size;
+    [%- tadlskin.ou_display_names.TADL = "in District";
+        depths = ctx.copy_summary.size;
         depth = 0;
         displayed_ous = {};
         WHILE depth < depths;
@@ -22,7 +23,7 @@
             END;
             displayed_ous.$ou_name = 1;
     %]
-    [% l('[quant,_1,copy,copies] [_2].', ou_avail, ou_name) | html %]
+    [% l('[_1] available [_2].', ou_avail, ou_name) | html %]
     [%- this_depth = ctx.get_aou(ou_id).ou_type.depth;
         IF ou_avail > 0 && this_depth != ctx.copy_depth %]
     <a href="[% mkurl('', {copy_depth => this_depth}, ['copy_offset']); %]"
@@ -45,13 +46,13 @@
     %]
     [%- IF attrs.plib_copy_counts.$depth.count > 0; %]
     [%
-        l('[_1] of [quant,_2,copy,copies] available [_3].',
+        l('[_1] available [_3].',
             attrs.plib_copy_counts.$depth.available,
             attrs.plib_copy_counts.$depth.count,
             ou_name) | html
     %] <a href="[% mkurl('', {locg => ou_id}, ['copy_offset']); %]"
        title="[% l('Show copies [_1]', ou_name); %]">[%
-       l('(Show preferred library)');
+       l('(Show)');
     %]</a><br />
     [%- END %]
     [%- END %]
