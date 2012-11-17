@@ -69,4 +69,17 @@ facet.display = [
     {facet_class => 'subject', facet_order => ['name', 'geographic']}
 ];
 
+
+##############################################################################
+# TADL overrides for display
+tadlskin.ou_display_names = {
+    'TADL' => 'in TADL district',
+    'TADL-EBB' => 'at East Bay',
+    'TADL-FLPL' => 'at Fife Lake',
+    'TADL-IPL' => 'at Interlochen',
+    'TADL-KBL' => 'at Kingsley',
+    'TADL-PCL' => 'at Peninsula',
+    'TADL-WOOD' => 'at Woodmere',
+};
+
 %]

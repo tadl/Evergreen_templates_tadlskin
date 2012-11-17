@@ -77,6 +77,11 @@ END;
             [%- ELSE %]<td header='copy_header_library'>
             [%-
                 org_name = ctx.get_aou(copy_info.circ_lib).name;
+                # TADL hack to override displayed OU name
+                org_shortname = ctx.get_aou(copy_info.circ_lib).shortname;
+                IF tadlskin.ou_display_names.exists(org_shortname);
+                        org_name  = tadlskin.ou_display_names.$org_shortname.remove('^(at|in) ');
+                END;
                 org_name | html
             -%]
             </td>[% END %]

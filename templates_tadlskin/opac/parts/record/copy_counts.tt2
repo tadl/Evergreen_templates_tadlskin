@@ -14,7 +14,12 @@
                 depth = depth + 1;
                 NEXT;
             END;
-            ou_name = cp_org_unit.name;
+            # TADL hack to override displayed OU name
+            IF tadlskin.ou_display_names.exists(cp_org_unit.shortname);
+                ou_name = tadlskin.ou_display_names.${cp_org_unit.shortname};
+            ELSE;
+                ou_name = cp_org_unit.name;
+            END;
             displayed_ous.$ou_name = 1;
     %]
     [% l('[quant,_1,copy,copies] at [_2].', ou_avail, ou_name) | html %]

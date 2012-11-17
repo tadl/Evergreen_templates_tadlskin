@@ -3,17 +3,23 @@
     displayed_ous = {};
     WHILE depth < depths;
         # TADL hack to hide counts for top of tree
-	IF attrs.copy_counts.$depth.org_unit == 1;
-            depth = depth + 1;
-            NEXT;
-	END;
-        ou_name = ctx.get_aou(attrs.copy_counts.$depth.org_unit).name;
+        IF attrs.copy_counts.$depth.org_unit == 1;
+                depth = depth + 1;
+                NEXT;
+        END;
+        # TADL hack to override displayed OU name
+        ou_shortname = ctx.get_aou(attrs.copy_counts.$depth.org_unit).shortname;
+        IF tadlskin.ou_display_names.exists(ou_shortname);
+            ou_name = tadlskin.ou_display_names.$ou_shortname;
+        ELSE;
+            ou_name = ctx.get_aou(attrs.copy_counts.$depth.org_unit).name;
+        END;
         displayed_ous.$ou_name = 1;
         IF attrs.copy_counts.$depth.count > 0;
 %]
 <div class="result_count">
 [% IF ctx.get_aou(attrs.copy_counts.$depth.org_unit).opac_visible == 't' AND !ctx.is_staff %]
-    [% l('[_1] of [quant,_2,copy,copies] available at [_3].',
+    [% l('[_1] of [quant,_2,copy,copies] available [_3].',
         attrs.copy_counts.$depth.available,
         attrs.copy_counts.$depth.count,
         ou_name) | html
@@ -25,13 +31,18 @@
     END;
 
     depth = attrs.plib_copy_counts.size - 1;
-    ou_name = ctx.get_aou(attrs.plib_copy_counts.$depth.org_unit).name;
+    # TADL hack to override displayed OU name
+    IF tadlskin.ou_display_names.exists(ou_shortname);
+        ou_name = tadlskin.ou_display_names.$ou_shortname;
+    ELSE;
+        ou_name = ctx.get_aou(attrs.plib_copy_counts.$depth.org_unit).name;
+    END;
     UNLESS displayed_ous.exists(ou_name);
     
 %]
 [%- IF attrs.plib_copy_counts.$depth.count > 0; %]
 <div class="result_count preferred">[%
-     l('[_1] of [quant,_2,copy,copies] available at [_3].',
+     l('[_1] of [quant,_2,copy,copies] available [_3].',
         attrs.plib_copy_counts.$depth.available,
         attrs.plib_copy_counts.$depth.count,
         ou_name) | html
