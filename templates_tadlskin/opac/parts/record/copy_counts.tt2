@@ -22,11 +22,11 @@
             END;
             displayed_ous.$ou_name = 1;
     %]
-    [% l('[quant,_1,copy,copies] at [_2].', ou_avail, ou_name) | html %]
+    [% l('[quant,_1,copy,copies] [_2].', ou_avail, ou_name) | html %]
     [%- this_depth = ctx.get_aou(ou_id).ou_type.depth;
         IF ou_avail > 0 && this_depth != ctx.copy_depth %]
     <a href="[% mkurl('', {copy_depth => this_depth}, ['copy_offset']); %]"
-       title="[% l('Show copies at [_1]', ou_name); %]">
+       title="[% l('Show copies [_1]', ou_name); %]">
        [%- l('(Show)'); %]</a>
     [%- END; %]
     <br />
@@ -35,6 +35,7 @@
 
         depth = attrs.plib_copy_counts.size - 1;
         ou_name = ctx.get_aou(attrs.plib_copy_counts.$depth.org_unit).name;
+        # TADL hack to override displayed OU name
         ou_shortname = ctx.get_aou(attrs.plib_copy_counts.$depth.org_unit).shortname;
         IF tadlskin.ou_display_names.exists(ou_shortname);
             ou_name = tadlskin.ou_display_names.$ou_shortname;
@@ -44,12 +45,12 @@
     %]
     [%- IF attrs.plib_copy_counts.$depth.count > 0; %]
     [%
-        l('[_1] of [quant,_2,copy,copies] available at [_3].',
+        l('[_1] of [quant,_2,copy,copies] available [_3].',
             attrs.plib_copy_counts.$depth.available,
             attrs.plib_copy_counts.$depth.count,
             ou_name) | html
     %] <a href="[% mkurl('', {locg => ou_id}, ['copy_offset']); %]"
-       title="[% l('Show copies at [_1]', ou_name); %]">[%
+       title="[% l('Show copies [_1]', ou_name); %]">[%
        l('(Show preferred library)');
     %]</a><br />
     [%- END %]
