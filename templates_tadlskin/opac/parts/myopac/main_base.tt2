@@ -51,7 +51,7 @@
 	[% ELSE %]
 		<p>You do not currently have a holdshelf alias set.</p>
 	[% END %]
-		<p><a href="[% mkurl(ctx.opac_root _ '/myopac/update_alias') %]">change</a> - <a href="http://www.tadl.org/lobbyupdate">what's an alias?</a></p>
+		<p><a href="[% mkurl(ctx.opac_root _ '/myopac/update_alias') %]">change</a> - <a href="http://www.tadl.org/creating-alias-holds-shelf">what's an alias?</a></p>
 	</div>
     </div>
     [% END %]
