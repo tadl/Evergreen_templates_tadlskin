@@ -37,9 +37,9 @@
                             END;
                     -%]
                         <tr class="result_table_row">
-                                            <td class="results_row_count" name="results_row_count">[%
+                                            <!-- <td class="results_row_count" name="results_row_count">[%
                                                     result_count; result_count = result_count + 1
-                                                %].</td>
+                                                %].</td> -->
                                             <td class='result_table_pic_header'>
                                                 [% ident = attrs.isbn_clean || attrs.upc; %]
 						[%
