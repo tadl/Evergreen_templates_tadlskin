@@ -57,6 +57,9 @@
                                             </td>
                                             <td class='result_table_title_cell' name='result_table_title_cell'>
                                                 <div class="bold bigger">
+                                                [% IF attrs.format_icon %]
+                                                <img title="[% attrs.format_label | html %]" alt="[% attrs.format_label | html %]" src="[% attrs.format_icon %]" />
+                                                [% END %]
                                                     <a name='record_[% rec.id %]' name='item_title'
                                                         href="[% mkurl(ctx.opac_root _ '/record/' _ rec.id) %]"
                                                         [% HTML.attributes(title => l('Display record details for "[_1]"', attrs.title)) %]
@@ -213,11 +216,11 @@
                                             </td>
 
                                             <td name='result_table_format_cell' class='result_table_format_cell' width="1">
-
+                                                <!--
                                                 [% IF attrs.format_icon %]
                                                 <img title="[% attrs.format_label | html %]" alt="[% attrs.format_label | html %]" src="[% attrs.format_icon %]" />
                                                 [% END %]
-
+                                                -->
                                                 <!-- unAPI link -->
                                                 <abbr class="unapi-id" title='tag:[% ctx.hostname %],[% date.format(date.now, '%Y') %]:biblio-record_entry/[% rec.id %]'></abbr>
 
