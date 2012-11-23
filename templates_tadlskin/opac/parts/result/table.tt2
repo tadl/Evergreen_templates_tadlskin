@@ -81,7 +81,7 @@
                                                         [% IF args.holdings.size > 0 %]
                                                         <tr name='bib_cn_list' class='result_table_title_cell'>
                                                             <td valign='top'>
-                                                                <strong>[% l('Call number:') %]</strong>
+                                                                <strong>[% l('Call number: ') %]</strong>
                                                             </td>
                                                             <td>[% args.holdings.0.label | html %]</td>
                                                         </tr>
@@ -90,6 +90,14 @@
                                                         <tr name='bib_uri_list' class='result_table_title_cell'>
                                                                 <td valign='top'>
                                                                         <a href="[% args.uris.0.href %]" class="tbutton small tadlblue"><span>Connect to this resource online</span></a>
+                                                                </td>
+                                                        </tr>
+                                                        [% END %]
+
+                                                        [% IF args.summaries %]
+                                                        <tr name='bib_summary' class='result_table_summary'>
+                                                                <td valign='top' colspan='2'>
+                                                                    [% args.summaries.0 | truncate(200) %]
                                                                 </td>
                                                         </tr>
                                                         [% END %]
