@@ -80,10 +80,9 @@
                                                         class="results_info_table">
                                                         [% IF args.holdings.size > 0 %]
                                                         <tr name='bib_cn_list' class='result_table_title_cell'>
-                                                            <td valign='top'>
+                                                            <td valign='top' align='left' colspan='2'>
                                                                 <strong>[% l('Call number: ') %]</strong>
-                                                            </td>
-                                                            <td>[% args.holdings.0.label | html %]</td>
+                                                            [% args.holdings.0.label | html %]</td>
                                                         </tr>
                                                         [% END %]
                                                         [% IF args.ezproxy %]
@@ -96,7 +95,7 @@
 
                                                         [% IF args.summaries %]
                                                         <tr name='bib_summary' class='result_table_summary'>
-                                                                <td valign='top' colspan='2'>
+                                                                <td valign='top' colspan='2' class='result_table_summary'>
                                                                     [% args.summaries.0 | truncate(200) %]
                                                                 </td>
                                                         </tr>

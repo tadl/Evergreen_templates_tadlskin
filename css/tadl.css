@@ -833,7 +833,7 @@ div.format_icon {
 }
 
 .start_end_links_span {
-	font-size: 11px;
+	font-size: 14px;
 }
 
 #result_table_div {
@@ -850,6 +850,14 @@ tr.result_table_row {
 
 tr.result_table_row > td.result_table_title_cell {
     padding:5px 5px;
+}
+
+.result_table_summary {
+    padding-left:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    font-style:italic;
+    font-size:1.05em;
 }
 
 tr.result_table_row > td.results_row_count,
@@ -1265,7 +1273,7 @@ div.facet_sidebar {
 #adv_global_addrow a:hover { color:#f70; }
 .adv_adv_link { font-size: 8pt; color: red; }
 #acct_prefs_header { float: left; }
-.search_page_nav_link { cursor: pointer; }
+.search_page_nav_link { padding-left:5px; cursor: pointer; }
 #opac.result.sort { width: 160px; }
 .renew-summary { font-size: 125%; font-style: italic; margin: 0.5ex 0; }
 .failure-text { margin-left: 4em; font-style: italic; color: #ff0000; }
