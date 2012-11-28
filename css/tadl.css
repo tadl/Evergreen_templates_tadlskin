@@ -1336,7 +1336,9 @@ a.dash-link:hover { text-decoration: underline !important; }
 }
 .cn_browse_item { padding: 2ex; }
 
-.results-paginator-selected { color: red; }
+.results-paginator-selected { color: #004677; padding: 3px 4px 2px; font-weight: bold; border: 1px solid #dadada; background:#fff; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; }
+.results-paginator { padding: 3px 4px 2px; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; text-decoration:none; }
+.results-paginator:hover { padding: 3px 4px 2px; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; text-decoration:none; background:#fff; }
 .inactive-hold { background: #e5e5e5; }
 
 #hold-items-list td { padding: 5px; margin-bottom: 20px; }

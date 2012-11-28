@@ -32,7 +32,7 @@
                                     IF pageitr == page; %]
                                         <span class='results-paginator-selected'>[% pageitr + 1%]</span>
                                     [% ELSE %]
-                                        <a href="[% mkurl('', {page => pageitr}) %]">[% pageitr + 1%]</a>
+                                        <a href="[% mkurl('', {page => pageitr}) %]" class="results-paginator">[% pageitr + 1%]</a>
                                 [%  END;
                                     added = added + 1;
                                     IF added == 8; LAST; END;
