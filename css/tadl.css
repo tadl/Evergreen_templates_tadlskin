@@ -1296,8 +1296,11 @@ div.facet_sidebar {
 .pending-addr td { background-color: #ffcccc !important; border: 0 !important; }
 
 #account-update-email table { text-align: center; padding: 20px; margin-top: 30px; border-collapse: collapse; }
-#account-update-email table td { padding: 5px 15px 5px 15px; border-bottom: 1px solid #ddd; text-align: left;}
+#account-update-email table td { padding: 5px 15px 5px 15px; font-size:1.2em; text-align: left;}
 #account-update-email-error { font-size: 1.5em; padding: 10px; border:1px solid #e9ebf3;}
+#account-update-alias table { text-align: center; padding: 20px; margin-top: 30px; border-collapse: collapse; }
+#account-update-alias table td { padding: 5px 15px 5px 15px; font-size:1.2em; text-align: left;}
+#account-update-alias-error { font-size: 1.5em; padding: 10px; border:1px solid #e9ebf3;}
 a.dash-link:hover { text-decoration: underline !important; }
 #list_create_table td { vertical-align: middle; padding: 0 8px; }
 #list_create_table {
