@@ -81,6 +81,7 @@ FOR facet IN sorted_facets;
             <div class="box">
             [% FOR facet_data IN facet.data;
                 display_value = facet_data.value | html;
+		IF display_value.match('^(e-uk|n-us|e-fr|a-ja).*'); NEXT; END;
                 param_string = fclass _ '|' _ fname _ '[' _ facet_data.value _ ']';
                 new_facets = [];
                 this_selected = 0;
