@@ -8,7 +8,7 @@ item_formats = [
     { 'code' => 'i', 'value' => 'Audiobooks' },
     { 'code' => 'g', 'value' => 'Video Recordings' },
     { 'code' => 'j', 'value' => 'Music' },
-    { 'code' => 'm', 'value' => 'Electronic Resources' },
+    { 'code' => 'm', 'value' => 'Streaming Video and Online Books' },
 ];
 %]
 
