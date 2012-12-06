@@ -1,3 +1,4 @@
+    <h1 style='margin:5px; font-weight:bold;'>Refine Search</h1>
 <div class="facet_box_wrapper">
 [% 
 
