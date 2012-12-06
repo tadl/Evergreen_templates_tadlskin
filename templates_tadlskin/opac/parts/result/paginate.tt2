@@ -3,7 +3,7 @@
     <span class="h1">[% ctx.bookbag ? l('List Contents') : l('Search Results') %]</span>
     <span nowrap="nowrap" class="result_number">
                 [% |l(ctx.result_start, ctx.result_stop, ctx.hit_count) %]
-                Results <strong>[_1]</strong> - <strong>[_2]</strong> of <strong>[_3]</strong>
+                 <strong>[_1]</strong> - <strong>[_2]</strong> of <strong>[_3]</strong>
                 [% END %]
                 <span style='padding-left: 6px;'>
                     [% |l(page + 1, page_count) %](page <strong>[_1]</strong> of <strong>[_2]</strong>)[% END %]
@@ -22,7 +22,7 @@
                     <a class='[% class %]' href='[% href %]' 
                         title='[% l("Previous page") %]'><span class="nav_arrow_fix">&#9668;</span> [% l('Previous') %] </a>
 
-                    <span style='padding-left: 11px; padding-right:11px;'>
+                    <span style='padding: 0 6px;'>
                         [%  # show links to 4 previous pages, the current page, and 3 more pages.
                             added = 0;
                             pageitr = page - 5; 
