@@ -31,6 +31,12 @@
         FOR sub IN xml.findnodes('//*[@tag="100"]/*[@code="a"]');
             args.authors.push(sub.textContent);
         END;
+        FOR sub IN xml.findnodes('//*[@tag="110"]/*[@code="a"]');
+            args.authors.push(sub.textContent);
+        END;
+        FOR sub IN xml.findnodes('//*[@tag="511"]/*[@code="a"]');
+            args.authors.push(sub.textContent);
+        END;
         args.author = (args.authors.size) ? args.authors.0 : '';
 
         # Include subfields 'abnp' to generate a more comprehensive title display in search results
