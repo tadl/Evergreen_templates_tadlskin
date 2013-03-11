@@ -11,7 +11,11 @@
     <div id="content-wrapper">
         <div id="main-content-home">
             <div class="common-full-pad"></div>
-            [% INCLUDE "opac/parts/homesearch.tt2" %]
+            [%- IF ctx.physical_dept == 'ys' %]
+                [% INCLUDE "opac/parts/homesearch_ys.tt2" %]
+            [%- ELSE %]
+                [% INCLUDE "opac/parts/homesearch.tt2" %]
+	    [%- END -%]
             <div class="common-full-pad"></div>	
         </div>
     </div>

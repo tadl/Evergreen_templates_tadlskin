@@ -1,0 +1,6 @@
+<div id="homesearch_main_logo">
+<h1 class="home-header">[% l("New Books"); %]</h1>
+<iframe width="960" height="240" src="https://www.tadl.org/slider/youth.php" frameborder="0" marginwidth="5" marginheight="5" scrolling="no" style="background:#F0F2F5;text-align:center"></iframe>
+<h1 class="home-header">[% l("On Display"); %]</h1>
+<iframe width="960" height="200" src="https://www.tadl.org/slider/youthdisplay.php" frameborder="0" marginwidth="5" marginheight="5" scrolling="no" style="background:#F0F2F5;text-align:center"></iframe>
+</div>
