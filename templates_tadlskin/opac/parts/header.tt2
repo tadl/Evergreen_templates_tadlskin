@@ -91,7 +91,10 @@
     # defining that separately.
     want_dojo = 0;
 
-    use_autosuggest = ctx.get_cgf("opac.use_autosuggest");
+    IF ctx.physical_dept == 'ys';
+    ELSE;
+        use_autosuggest = ctx.get_cgf("opac.use_autosuggest");
+    END;
 
     IF use_autosuggest.enabled == "t";
         want_dojo = 1;
