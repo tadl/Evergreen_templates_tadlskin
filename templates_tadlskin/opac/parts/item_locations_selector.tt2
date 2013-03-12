@@ -1,0 +1,35 @@
+
+[%
+# These are displayed in the order shown
+IF dept == 'ys';
+    item_locations = [
+        { 'code' => '527,571,770,599,771,529,528,530,531,532,598,597,595,596,630', 'value' => 'Juvenile' },
+        { 'code' => '571,597,595', 'value' => 'Juvenile Audiobooks' },
+        { 'code' => '529', 'value' => 'Juvenile Easy' },
+        { 'code' => '528', 'value' => 'Juvenile Easy Plus' },
+        { 'code' => '549', 'value' => 'Puppets' },
+    ];
+ELSE;
+    item_locations = [
+        { 'code' => '', 'value' => 'All' },
+    ];
+END;
+%]
+
+[%-
+    name = "fi:locations";
+    id = "item_locations_selector";
+    values = values || CGI.param(name);
+-%]
+
+<select id='[% id %]' name='[% name %]'[%
+    multiple ? ' multiple="multiple"' : '';
+    size ? (' size="' _ size _ '"') : ''; %]>
+[% IF none_ok %]
+    <option value=''>[% none_label ? none_label : l('-- Any --') %]</option>
+[% END;
+FOR o IN item_locations; %]
+    <option value='[% o.code %]'[% values.grep('^' _ o.code _ '$').size ? ' selected="selected"' : '' %]>[% o.value | html %]</option>
+[%  END -%]
+</select>
+
