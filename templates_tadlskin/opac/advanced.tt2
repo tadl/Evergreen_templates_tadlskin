@@ -26,7 +26,7 @@
             </div>
         </div>
     </div>
-    <div id="content-wrapper">
+    <div id="content-wrapper"[% IF ctx.physical_dept == 'ys'; ' class="ys"'; END %]>
         <div id="main-content">
             <div class="advanced_div">
             [% IF pane == 'advanced' %]

@@ -1,5 +1,5 @@
 [% PROCESS "opac/parts/org_selector.tt2" %]
-<div id="search-box">    
+<div id="search-box"[% IF ctx.physical_dept == 'ys'; ' class="ys"'; END %]>    
     [% UNLESS took_care_of_form -%]
     <form action="[% ctx.opac_root %]/results" method="GET">
     [%- END %]

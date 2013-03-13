@@ -6,7 +6,7 @@
         [% INCLUDE "opac/parts/searchbar.tt2" %]
     </div>
     <br class="clear-both" />
-    <div id="content-wrapper" class="content-wrapper-record-page">
+    <div id="content-wrapper" class="content-wrapper-record-page[% IF ctx.physical_dept == 'ys'; ' ys'; END %]">
         [% IF ctx.staff_saved_search_size %]
         <div id="results-side-bar">
             <div id="staff-saved-search">

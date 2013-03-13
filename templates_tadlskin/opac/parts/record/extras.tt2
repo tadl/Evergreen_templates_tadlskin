@@ -1,5 +1,5 @@
 <div>
-    <div id='rdetail_extras_div' style='width: 100%;'> 
+    <div id='rdetail_extras_div' style='width: 100%;'[% IF ctx.physical_dept == 'ys'; ' class="ys"'; END %]> 
 
         [%  # Hidden extras are not yet implemented.  Some may require JS
 

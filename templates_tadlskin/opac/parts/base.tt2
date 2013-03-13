@@ -19,7 +19,7 @@
         <link rel="unapi-server" type="application/xml" title="unAPI" href="/opac/extras/unapi" />
         [% INCLUDE 'opac/parts/goog_analytics.tt2' %]
     </head>
-    <body[% IF want_dojo; ' class="tundra"'; END %]>
+    <body[% IF want_dojo; ' class="tundra"'; END %][% IF ctx.physical_dept == 'ys'; ' class="ys"'; END %]>
         [% content %] 
         [% INCLUDE 'opac/parts/footer.tt2' %]
         [% INCLUDE 'opac/parts/js.tt2' %]

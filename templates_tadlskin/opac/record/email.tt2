@@ -7,7 +7,7 @@
         [% INCLUDE "opac/parts/searchbar.tt2" %]
     </div>
     <br class="clear-both" />
-    <div id="content-wrapper" class="content-wrapper-record-page">
+    <div id="content-wrapper" class="content-wrapper-record-page[% IF ctx.physical_dept == 'ys'; ' ys'; END %]">
         <div id='main-content'>
             <br/>
             <h2 class='success'>[% l('Your email has been queued for Delivery.') %]</h2>

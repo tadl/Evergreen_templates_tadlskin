@@ -9,7 +9,7 @@
     [% INCLUDE 'opac/parts/record/refworks.tt2' %]
 [%- END %]
 
-<hr />
+<!-- <hr /> -->
 
 [%-# This holds the record summary information %]
 <div id="rdetail_summary_header">
@@ -41,7 +41,7 @@
         <br />
     </div>
 
-    <div id="rdetail_actions_div">
+    <div id="rdetail_actions_div"[% IF ctx.physical_dept == 'ys'; ' class="ys"'; END %]>
 	[% IF !args.ezproxy %]
 				<div class="rdetail_aux_utils rdetail_aux_copycounts">
 					[%- INCLUDE "opac/parts/record/copy_counts.tt2" %]

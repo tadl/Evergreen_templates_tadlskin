@@ -6,6 +6,10 @@ body {
 	background: #f0f2f5 url(/images/tadl/header-top-shadow-bg.png) left top repeat-x;
 }
 
+body.ys {
+	background: url(/images/tadl/concentric.png) center top fixed;
+}
+
 img {
 	border: none;
 }
@@ -72,7 +76,10 @@ h1 {
 }
 
 h1.home-header {
-	padding-left:3em;
+	font-size:2.5em;
+//	padding-left:3em;
+	text-align:center;
+	margin-bottom:1em;
 }
 
 h2 {
@@ -167,14 +174,22 @@ span.dash_divider {
     width:960px;
     margin: 0 auto;
     background:none;
-    background-color: #f0f2f5;
 }
 #header {
 	color: #fff;
-	padding: 22px 10px 0 10px;
+	padding: 12px 10px 0 10px;
 	margin-left: 0;
 	font-size:11px;
 	background: #f0f2f5 url(/images/tadl/header-top-shadow-bg.png) left top repeat-x;
+}
+#header.ys {
+	background: rgba(240,242,245,0.5);
+	-webkit-border-bottom-left-radius:10px;
+	-moz-border-bottom-left-radius:10px;
+	border-bottom-left-radius:10px;
+	-webkit-border-bottom-right-radius:10px;
+	-moz-border-bottom-right-radius:10px;
+	border-bottom-right-radius:10px;
 }
 
 #header a {
@@ -255,14 +270,12 @@ span.dash_divider {
 #search-wrapper {
         width:960px;
         margin:0 auto;
-	border-bottom: 1px solid #e9ebf3;
 	padding-bottom: 0;
-	background: #f0f2f5;
 }
 
 .searchbar {
 	margin-top:5px;
-	padding-left:5em;
+	padding-left:3em;
 	padding-bottom:10px;
 	text-align:left;
 }
@@ -298,9 +311,19 @@ span.dash_divider {
 
 #search-wrapper #search-box {
 	padding-left: 0px;
+	background: #f0f2f5;
 }
 #search-box a:hover {
 	color:#f70;
+}
+#search-wrapper #search-box.ys {
+	background: rgba(240,242,245,0.5);
+	-webkit-border-top-left-radius:10px;
+	-moz-border-top-left-radius:10px;
+	border-top-left-radius:10px;
+	-webkit-border-top-right-radius:10px;
+	-moz-border-top-right-radius:10px;
+	border-top-right-radius:10px;
 }
 
 #utils {
@@ -424,9 +447,14 @@ span.dash_divider {
 .rdetail_header {
     padding: 5px 7px 6px 0px;
     margin-left: 1em;
-    border-bottom: 1px solid #e6e6e6;
+    clear:both;
+//    border-bottom: 1px solid #e6e6e6;
 }
 
+#copy_hold_counts {
+	padding-top:1em;
+	clear:both;
+}
 .rdetail_results a {
     color:#424242;
     font-weight:bold;
@@ -479,6 +507,14 @@ div#rdetail_actions_div {
     float: right;
     background: white;
     border: 1px solid #e6e6e6;
+}
+div#rdetail_actions_div.ys {
+	-webkit-border-bottom-left-radius:10px;
+	-moz-border-bottom-left-radius:10px;
+	border-bottom-left-radius:10px;
+	-webkit-border-top-left-radius:10px;
+	-moz-border-top-left-radius:10px;
+	border-top-left-radius:10px;
 }
 
 span#rdetail_copy_counts {
@@ -560,7 +596,10 @@ div.format_icon {
 	font-size: 10px;
 	text-transform: uppercase;
 	font-weight: bold;
-    text-align: left;
+	text-align: left;
+}
+#rdetails_status.ys thead th {
+	background: rgba(255,119,0,0.5);
 }
 
 #rdetails_status tbody td {
@@ -597,6 +636,10 @@ div.format_icon {
 	top: 2px;
 	left: 7px;
 	color: white;
+}
+
+#rdetail_extras_div.ys {
+	display:none;
 }
 
 #paginate-homebanner a.toc {
@@ -706,7 +749,7 @@ div.format_icon {
 .almost-content-wrapper {
 	width:960px;
 	margin:0 auto;
-	background: white;
+	background: none transparent;
 }
 
 #content-wrapper {
@@ -717,7 +760,10 @@ div.format_icon {
 	border-bottom: none;
 }
 
-.content-wrapper-record-page { top: -15px; position: relative; }
+#content-wrapper.ys {
+	background: rgba(240,242,245,0.5);
+}
+.content-wrapper-record-page { top: -16px; position: relative; }
 
 #main-content-home {
     padding-left: 0;
@@ -786,7 +832,9 @@ div.format_icon {
 
 #results_header_bar {
 	background: #929292;
-	border-top:1px solid #8b8b8b;
+}
+#results_header_bar.ys {
+	background: rgba(255,119,0,0.5);
 }
 
 #results_header_inner {
@@ -800,19 +848,20 @@ div.format_icon {
 	float: left;
 	width: 0px;
 	height: 38px;
-	border-left: 1px solid #7c7c7c;
-	border-right: 1px solid #9c9c9c;
 	margin: 0px 13px;
 }
 
 .results_header_lbl {
 	font-weight: bold;
 	float: left;
-	font-size: 11px;
+	font-size:13px;
 	color: #191919;
 	background: #929292;
 	margin-right: 6px;
-	padding-top:10px;
+	padding-top:8px;
+}
+.results_header_lbl.ys {
+        background: none transparent;
 }
 
 .results_header_sel {

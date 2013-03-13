@@ -8,7 +8,7 @@
     <div id="search-wrapper">
         [% INCLUDE "opac/parts/searchbar.tt2" %]
     </div>
-    <div id="content-wrapper">
+    <div id="content-wrapper"[% IF ctx.physical_dept == 'ys'; ' class="ys"'; END %]>
         <div id="main-content-home">
             <div class="common-full-pad"></div>
             [%- IF ctx.physical_dept == 'ys' %]
