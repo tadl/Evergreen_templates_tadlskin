@@ -6,7 +6,7 @@
     loc = ctx.search_ou;
 -%]
     <div id="search-wrapper">
-        <div id="search-box">
+        <div id="search-box"[% IF ctx.physical_dept == 'ys'; ' class="ys" style="margin-top:10px;padding:10px 0 0 15px;"'; END %]>
             <span class="search_catalog_lbl">[% l('Search the Catalog') %]</span>
             <a href="[% mkurl(ctx.opac_root _ '/home') %]"
                 id="home_adv_search_link"><span
