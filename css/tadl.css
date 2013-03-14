@@ -1085,6 +1085,7 @@ div.result_place_hold {
 	font-weight:bold;
 	text-transform:uppercase;
 	font-size: 10px;
+	padding-right:10px;
 }
 
 #acct_checked_main_header td,
@@ -1136,9 +1137,13 @@ div.result_place_hold {
 	margin-bottom:20px;
 }
 
+#myopac_tabs.ys, #adv_search_parent.ys, #fines_payments_wrapper.ys {
+	background: rgba(255,119,0,0.5);
+}
 #fines_payments_wrapper {
     padding-left: 5px; 
     padding-right: 5px;
+    width:925px;
 }
 
 .myopac_payments_table th { text-align: left; }

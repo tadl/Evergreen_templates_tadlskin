@@ -12,7 +12,7 @@
                 id="home_adv_search_link"><span
                 class="adv_search_font">[%l('Basic Search')%]</span></a>
         </div>
-        <div id="adv_search_parent">
+        <div id="adv_search_parent"[% IF ctx.physical_dept == 'ys'; ' class="ys"'; END %]>
             <div id="adv_search_tabs">
                 <a href="[% mkurl('', {pane => 'advanced'}) %]"
                     [% IF pane == 'advanced' %]class="on" [% END %]

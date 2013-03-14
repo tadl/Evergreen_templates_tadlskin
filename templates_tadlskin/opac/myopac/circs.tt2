@@ -83,7 +83,7 @@
                 <td width="16%">
                     <span title="Click to sort" class='pointer'>barcode</span>
                 </td>
-                <td width="22%">
+                <td width="20%">
                     <span title="Click to sort" class='pointer'>call number</span>
                 </td>
             </tr>
@@ -127,7 +127,7 @@
                         <td width="16%" name="barcode">
                             [% circ.circ.target_copy.barcode | html %]
                         </td>
-                        <td width="22%" name="call_number">
+                        <td width="20%" name="call_number">
                             [% circ.circ.target_copy.call_number.label | html %]
                         </td>
                     </tr>

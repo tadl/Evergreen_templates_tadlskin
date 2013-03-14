@@ -101,8 +101,8 @@
         </div>
     </div>
     <div class="clear-both"></div>
-    <div id='fines_payments_wrapper'>
-        <div id='acct_fines_tabs'>
+    <div id="fines_payments_wrapper"[% IF ctx.physical_dept == 'ys'; ' class="ys"'; END %]>
+        <div id="acct_fines_tabs">
             [% IF myopac_main_page == 'main' %]
             <a href='#' class="acct-tab-on">[% l("Fines") %]</a>
             <a href='[% mkurl(ctx.opac_root _ '/myopac/main_payments') %]' class="acct-tab-off">[% l("Payments") %]</a>
