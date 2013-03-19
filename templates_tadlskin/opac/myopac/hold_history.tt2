@@ -39,17 +39,17 @@
             <big><strong>[% l('No holds found.') %]</strong></big>
         </div>
         [% ELSE %]
-        <table style='border-collapse:collapse; width: 100%;'>
+        <table style='border-collapse:collapse;width:100%;font-size:1.2em;'>
             <thead id='acct_holds_main_header'>
                 <tr>
-                    <td width="138"><span>[% l('Title') %]</span></td>
-                    <td width="123"><span>[% l('Author') %]</span></td>
-                    <td width="64"> <span>[% l('Format') %]</span></td>
-                    <td width="136"><span>[% l('Pickup Location') %]</span> </td>
+                    <td><span>[% l('Title') %]</span></td>
+                    <td><span>[% l('Author') %]</span></td>
+                    <td> <span>[% l('Format') %]</span></td>
+                    <!-- <td width="136"><span>[% l('Pickup Location') %]</span> </td>
                     <td width="104">[% l('Active On') %]</td>
                     <td width="95">[% l('Active') %]</td>
                     <td width="106">[% l('Date Fulfilled') %]</td>
-                    <td width="172"><span>[% l('Status') %]</span></td>
+                    <td width="172"><span>[% l('Status') %]</span></td> -->
                 </tr>
             </thead>
             <tbody>
@@ -60,26 +60,26 @@
 
                 <tr id="acct_holds_temp" name="acct_holds_temp" class="acct_holds_temp">
 
-                    <td width="138">
-                        <div style="margin-top:10px;margin-bottom:10px;">
-                            <a href="[% mkurl(ctx.opac_root _ '/record/' _ hold.hold.bre_id) %]">[% attrs.title | html %]</a>
+                    <td style="vertical-align:top;">
+                        <div style="margin-top:10px;margin-bottom:10px;vertical-align:top;">
+                            <a href="[% mkurl(ctx.opac_root _ '/record/' _ hold.hold.bre_id) %]"><img src="/opac/extras/ac/jacket/small/r/[% hold.hold.bre_id %]" style="float:left;padding-right:5px;"/>[% attrs.title | html %]</a>
                         </div>
                     </td>
-                    <td width="123">
-                        <div style="margin-top:10px;margin-bottom:10px;">
+                    <td style="vertical-align:top;">
+                        <div style="margin-top:10px;margin-bottom:10px;vertical-align:top;">
                             <a href="[% mkurl(ctx.opac_root _ '/results',
                                 {qtype => author, query => attrs.author.replace('[,\.:;]', '')}
                             ) %]">[% attrs.author | html %]</a>
                         </div>
                     </td>
-                    <td width="64">
-                        <div style="width:26px;height:23px;margin-top:6px;margin-bottom:6px;">
+                    <td style="vertical-align:top;">
+                        <div style="width:26px;height:23px;margin-top:6px;margin-bottom:6px;vertical-align:top;">
                             [% IF attrs.format_icon %]
                             <img title="[% attrs.format_label | html %]" alt="[% attrs.format_label | html %]" src="[% attrs.format_icon %]" />
                             [% END %]
                         </div>
                     </td>
-                    <td width="136">
+                    <!-- <td width="136">
                         [% ctx.get_aou(ahr.pickup_lib).name | html %]
                     </td>
                     <td width="104">
@@ -100,7 +100,7 @@
                             style="margin-top:10px;margin-bottom:10px;">
                             [% PROCESS get_hold_status hold=hold; %]
                         </div>
-                    </td>
+                    </td> -->
                 </tr>
                 [% END %]
             </tbody>
