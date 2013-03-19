@@ -4,10 +4,11 @@
 IF dept == 'ys';
     item_locations = [
         { 'code' => '527,531,530,532,791,795,529,793,528,794,792,571,516,593,771,770,542,589,549', 'value' => 'Juvenile' },
-	{ 'code' => '791,795,529,793,528,794', 'indent' => 1, 'value' => 'Fiction' },
-	{ 'code' => '529,793', 'indent' => 1, 'value' => 'Easy' },
-	{ 'code' => '528,794', 'indent' => 1, 'value' => 'Easy Plus' },
 	{ 'code' => '792', 'indent' => 1, 'value' => 'Nonfiction' },
+	{ 'code' => '791,795,529,793,528,794', 'indent' => 1, 'value' => 'Fiction' },
+	{ 'code' => '529,793', 'indent' => 1, 'value' => ' - Easy (JE / Red)' },
+	{ 'code' => '528,794', 'indent' => 1, 'value' => ' - Easy Plus (JE+ / Pink)' },
+	{ 'code' => '791,795', 'indent' => 1, 'value' => ' - J FIC (Blue)' },
         { 'code' => '571', 'indent' => 1, 'value' => 'Audiobooks' },
         { 'code' => '516,593,771', 'indent' => 1, 'value' => 'Movies' },
         { 'code' => '770', 'indent' => 1, 'value' => 'Music' },
