@@ -39,10 +39,10 @@
             <big><strong>[% l('No holds found.') %]</strong></big>
         </div>
         [% ELSE %]
-        <table style='border-collapse:collapse;width:100%;font-size:1.2em;'>
+        <table style='border-collapse:collapse;width:940px;font-size:1.2em;'>
             <thead id='acct_holds_main_header'>
                 <tr>
-                    <td><span>[% l('Title') %]</span></td>
+                    <td><span>&nbsp;[% l('Title') %]</span></td>
                     <td><span>[% l('Author') %]</span></td>
                     <td> <span>[% l('Format') %]</span></td>
                     <!-- <td width="136"><span>[% l('Pickup Location') %]</span> </td>

@@ -89,7 +89,7 @@
                 <td width="36" align="center">
                     <input type="checkbox" onclick="var inputs=document.getElementsByTagName('input'); for (i = 0; i < inputs.length; i++) { if (inputs[i].name == 'hold_id' && !inputs[i].disabled) inputs[i].checked = this.checked;}"/>
                 </td>
-                <td width="138">
+                <td width="168">
                     <span title="Click to sort"
                         style="cursor:pointer;">
                         Title
@@ -102,7 +102,7 @@
                     <span title="Click to sort"
                         style="cursor:pointer;">Format</span>
                 </td>
-                <td width="136">
+                <td width="106">
                     <span title="Click to sort"
                         style="cursor:pointer;">Pickup Location</span>
                 </td>
@@ -128,10 +128,12 @@
                     ahr = hold.hold.hold %]
                 <tr id="acct_holds_temp" name="acct_holds_temp"
                     class="acct_holds_temp[% ahr.frozen == 't' ? ' inactive-hold' : '' %]">
-                    <td width="36" align="center" style="text-align:center;">
+                    <td width="36" align="center" style="text-align:center;vertical-align:top;">
+                        <div style="margin-top:10px;margin-bottom:10px;">
                         <input type="checkbox" name="hold_id" value="[% ahr.id %]" />
+                        </div>
                     </td>
-                    <td width="138">
+                    <td width="168" style="vertical-align:top;">
                         <div style="margin-top:10px;margin-bottom:10px;">
                             [% 
                                 title = attrs.title;
@@ -139,27 +141,30 @@
                                     title = l('[_1] ([_2])', title, hold.hold.part.label);
                                 END;
                             %]
-                            <a href="[% mkurl(ctx.opac_root _ '/record/' _ hold.hold.bre_id) %]">[% title | html %]</a>
+                            <a href="[% mkurl(ctx.opac_root _ '/record/' _ hold.hold.bre_id) %]"><img src="/opac/extras/ac/jacket/small/r/[% hold.hold.bre_id %]" style="float:left;padding-right:5px;"/>[% title | html %]</a>
                         </div>
                     </td>
-                    <td width="123">
+                    <td width="123" style="vertical-align:top;">
                         <div style="margin-top:10px;margin-bottom:10px;">
                             <a href="[% mkurl(ctx.opac_root _ '/results',
                                 {qtype => 'author', query => attrs.author.replace('[,\.:;]', '')}
                             ) %]">[% attrs.author | html %]</a>
                         </div>
                     </td>
-                    <td width="64">
+                    <td width="64" style="vertical-align:top;">
                         <div style="width:26px;height:23px;margin-top:6px;margin-bottom:6px;">
                             [% IF attrs.format_icon %]
                             <img title="[% attrs.format_label | html %]" alt="[% attrs.format_label | html %]" src="[% attrs.format_icon %]" />
                             [% END %]
                         </div>
                     </td>
-                    <td width="136">
+                    <td width="106" style="vertical-align:top;">
+                        <div style="margin-top:10px;margin-bottom:10px;">
                         [% ctx.get_aou(ahr.pickup_lib).name | html %]
+                        </div>
                     </td>
-                    <td width="104">
+                    <td width="104" style="vertical-align:top;">
+                        <div style="margin-top:10px;margin-bottom:10px;">
                         <!-- <input
                             title="Enter a date (e.g. 10/21/2010)"
                             class="hide_me" style="width:91px;"
@@ -168,30 +173,35 @@
                                 ahr.thaw_date;
                             date.format(ctx.parse_datetime(ahr.thaw_date), DATE_FORMAT);
                         END %]
+                        </div>
                     </td>
-                    <td width="106">
+                    <td width="106" style="vertical-align:top;">
+                        <div style="margin-top:10px;margin-bottom:10px;">
                         <!-- <input title="[% l('Enter a date (e.g. 10/21/2010)') %]"
                             class="hide_me" style="width:91px;"
                             name="hold_expires_box" type="text" />-->
                         [% IF ahr.expire_time;
                             date.format(ctx.parse_datetime(ahr.expire_time), DATE_FORMAT);
                         END %]
+                        </div>
                     </td>
-                    <td width="95">
+                    <td width="95" style="vertical-align:top;">
+                        <div style="margin-top:10px;margin-bottom:10px;">
                         <!-- <select name="hold_active_sel"
                             style="width:90px;" class="hide_me">
                             <option value="f">Active</option>
                             <option value="t">Suspended</option>
                         </select> -->
                         [% l(ahr.frozen == 'f' ? 'Active' : 'Suspended') %]
+                        </div>
                     </td>
-                    <td width="110">
+                    <td width="110" style="vertical-align:top;">
                         <div name="acct_holds_status"
                             style="margin-top:10px;margin-bottom:10px;">
                             [% PROCESS get_hold_status hold=hold; %]
                         </div>
                     </td>
-                    <td class="opac-auto-161">
+                    <td class="opac-auto-161" style="vertical-align:top;">
                         <a href="[% mkurl(ctx.opac_root _ '/myopac/holds/edit', {id => ahr.id}) %]">Edit</a>
                     </td>
                 </tr>
