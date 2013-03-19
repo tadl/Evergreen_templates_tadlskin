@@ -43,7 +43,16 @@
             <tr>
                 <td>
                     <input type="hidden" name="hold_target" value="[% hdata.target.id | html %]" />
-                    <div class='hold-items-list-title'>[% attrs.title_extended | html %]</div>
+                    <!-- <div class='hold-items-list-title'>[% attrs.title_extended | html %]</div> -->
+                    <div class='hold-items-list-title'>
+                    <div style="background:#fff;padding:10px;border:1px solid #e6e6e6;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;">
+                      <img src="/opac/extras/ac/jacket/small/r/[% hdata.target.id | html %]" style="float:left;padding-right:10px;">
+                      <span style="font-size:1.5em;">[% attrs.title | html %]</span><br/>
+                      [% attrs.author | html %]<br/>
+                      [% attrs.phys_desc | html %]<br/>
+                    <div class="clear-both"></div>
+                    </div>
+                    </div>
                     [% IF hdata.parts %]
                         [% IF hdata.parts.size > 0 %]
                         <div style='padding-left: 10px'>

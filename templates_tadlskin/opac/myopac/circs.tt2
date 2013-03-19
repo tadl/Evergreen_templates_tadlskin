@@ -65,7 +65,8 @@
                         onclick="var inputs=document.getElementsByTagName('input'); for (i = 0; i < inputs.length; i++) { if (inputs[i].name == 'circ' && !inputs[i].disabled) inputs[i].checked = this.checked;}"
                     />
                 </td>
-                <td width="40%" style="padding-left:5px;">
+                <!-- <td width="40%" style="padding-left:5px;"> -->
+                <td width="76%" style="padding-left:5px;">
                     <span title="Click to sort" class='pointer'>
                         Title
                     </span> /
@@ -77,15 +78,15 @@
                     <span title="Click to sort" class='pointer'>Renews<br />Left
                     </span>
                 </td>
-                <td width="13%" style="padding-left:5px;">
+                <td width="16%" style="padding-left:5px;">
                     <span title="Click to sort" class='pointer'>Due Date</span>
                 </td>
-                <td width="16%">
+                <!-- <td width="16%">
                     <span title="Click to sort" class='pointer'>barcode</span>
-                </td>
-                <td width="20%">
+                </td> -->
+                <!-- <td width="20%">
                     <span title="Click to sort" class='pointer'>call number</span>
-                </td>
+                </td> -->
             </tr>
         </table>
    
@@ -96,40 +97,41 @@
                     [% FOR circ IN ctx.circs;
                         attrs = {marc_xml => circ.marc_xml};
                         PROCESS get_marc_attrs args=attrs; %]
-                    <tr>
+                    <tr style="font-size:1.2em;">
                         <td width="1%" style="padding-left:10px;" valign="top">
                             <input type="checkbox" name="circ"
                                 [% IF circ.circ.renewal_remaining < 1 %] disabled="disabled" [% END %]
                                 value="[% circ.circ.id %]" />
                         </td>
-                        <td width="40%"
-                            style="padding-left:5px;padding-bottom:10px;"
+                        <!-- <td width="40%" -->
+                        <td width="76%"
+                            style="padding-left:5px;padding-bottom:10px;vertical-align:top;"
                             name="author">
                             <a href="[% mkurl(ctx.opac_root _ '/record/' _ 
                                 circ.circ.target_copy.call_number.record.id) %]"
-                                name="[% l('Catalog record') %]">[% attrs.title | html %]</a>
+                                name="[% l('Catalog record') %]"><img src="/opac/extras/ac/jacket/small/r/[% circ.circ.target_copy.call_number.record.id %]" style="float:left;padding-right:5px;"/>[% attrs.title | html %]</a>
                             [% IF attrs.author %] /
                             <a href="[% mkurl(ctx.opac_root _ '/results',
                                 {qtype => 'author', query => attrs.author.replace('[,\.:;]', '')}
                             ) %]">[% attrs.author | html %]</a>
                             [% END %]
                         </td>
-                        <td width="8%" name="renewals" align="center">
+                        <td width="8%" name="renewals" align="center" style="vertical-align:top;">
                             [% circ.circ.renewal_remaining %]
                         </td>
                         [%
                             due_date = ctx.parse_datetime(circ.circ.due_date);
                             due_class = (date.now > date.format(due_date, '%s')) ? 'error' : '';
                         %]
-                        <td width="13%" style="padding-left:5px;" name="due_date" class='[% due_class %]'>
+                        <td width="16%" style="padding-left:5px;vertical-align:top;" name="due_date" class='[% due_class %]'>
                             [% date.format(due_date, DATE_FORMAT) %]
                         </td>
-                        <td width="16%" name="barcode">
+                        <!-- <td width="16%" name="barcode">
                             [% circ.circ.target_copy.barcode | html %]
-                        </td>
-                        <td width="20%" name="call_number">
+                        </td> -->
+                        <!-- <td width="20%" name="call_number">
                             [% circ.circ.target_copy.call_number.label | html %]
-                        </td>
+                        </td> -->
                     </tr>
                     [%  IF circ.renewal_response AND
                             circ.renewal_response.textcode != 'SUCCESS' %]
