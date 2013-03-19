@@ -3,11 +3,16 @@
 # These are displayed in the order shown
 IF dept == 'ys';
     item_locations = [
-        { 'code' => '527,571,770,599,771,529,528,530,531,532,598,597,595,596,630', 'value' => 'Juvenile' },
-        { 'code' => '571,597,595', 'value' => 'Juvenile Audiobooks' },
-        { 'code' => '529', 'value' => 'Juvenile Easy' },
-        { 'code' => '528', 'value' => 'Juvenile Easy Plus' },
-        { 'code' => '549', 'value' => 'Puppets' },
+        { 'code' => '527,531,530,532,791,795,529,793,528,794,792,571,516,593,771,770,542,589,549', 'value' => 'Juvenile' },
+	{ 'code' => '791,795,529,793,528,794', 'indent' => 1, 'value' => 'Fiction' },
+	{ 'code' => '529,793', 'indent' => 1, 'value' => 'Easy' },
+	{ 'code' => '528,794', 'indent' => 1, 'value' => 'Easy Plus' },
+	{ 'code' => '792', 'indent' => 1, 'value' => 'Nonfiction' },
+        { 'code' => '571', 'indent' => 1, 'value' => 'Audiobooks' },
+        { 'code' => '516,593,771', 'indent' => 1, 'value' => 'Movies' },
+        { 'code' => '770', 'indent' => 1, 'value' => 'Music' },
+        { 'code' => '542,589', 'indent' => 1, 'value' => 'Multimedia Kits' },
+        { 'code' => '549', 'indent' => 1, 'value' => 'Puppets' },
     ];
 ELSE;
     item_locations = [
@@ -29,7 +34,7 @@ END;
     <option value=''>[% none_label ? none_label : l('-- Any --') %]</option>
 [% END;
 FOR o IN item_locations; %]
-    <option value='[% o.code %]'[% values.grep('^' _ o.code _ '$').size ? ' selected="selected"' : '' %]>[% o.value | html %]</option>
+    <option value='[% o.code %]'[% values.grep('^' _ o.code _ '$').size ? ' selected="selected"' : '' %]>[% o.indent ? '&nbsp;&nbsp;' : ''; o.value | html %]</option>
 [%  END -%]
 </select>
 
