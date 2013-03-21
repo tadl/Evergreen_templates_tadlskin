@@ -66,7 +66,7 @@
                     />
                 </td>
                 <!-- <td width="40%" style="padding-left:5px;"> -->
-                <td width="76%" style="padding-left:5px;">
+                <td width="46%" style="padding-left:5px;">
                     <span title="Click to sort" class='pointer'>
                         Title
                     </span> /
@@ -81,12 +81,12 @@
                 <td width="16%" style="padding-left:5px;">
                     <span title="Click to sort" class='pointer'>Due Date</span>
                 </td>
-                <!-- <td width="16%">
+                <td width="15%">
                     <span title="Click to sort" class='pointer'>barcode</span>
-                </td> -->
-                <!-- <td width="20%">
+                </td>
+                <td width="15%">
                     <span title="Click to sort" class='pointer'>call number</span>
-                </td> -->
+                </td>
             </tr>
         </table>
    
@@ -104,7 +104,7 @@
                                 value="[% circ.circ.id %]" />
                         </td>
                         <!-- <td width="40%" -->
-                        <td width="76%"
+                        <td width="46%"
                             style="padding-left:5px;padding-bottom:10px;vertical-align:top;"
                             name="author">
                             <a href="[% mkurl(ctx.opac_root _ '/record/' _ 
@@ -126,12 +126,12 @@
                         <td width="16%" style="padding-left:5px;vertical-align:top;" name="due_date" class='[% due_class %]'>
                             [% date.format(due_date, DATE_FORMAT) %]
                         </td>
-                        <!-- <td width="16%" name="barcode">
+                        <td width="15%" name="barcode" style="vertical-align:top;">
                             [% circ.circ.target_copy.barcode | html %]
-                        </td> -->
-                        <!-- <td width="20%" name="call_number">
+                        </td>
+                        <td width="15%" name="call_number" style="vertical-align:top;">
                             [% circ.circ.target_copy.call_number.label | html %]
-                        </td> -->
+                        </td>
                     </tr>
                     [%  IF circ.renewal_response AND
                             circ.renewal_response.textcode != 'SUCCESS' %]
