@@ -14,6 +14,17 @@
                 class="tbutton medium tadlblue" id="home_myopac_link"><span>
                 [% l('My Account') %]
             </span></a>
+            [% IF ctx.physical_dept == 'ys' -%]
+                <a href="[% mkurl(ctx.opac_root _ '/home', {physical_dept => 'default'}) %]"
+                    class="tbutton medium tadlblue" id="home_theme_link"><span>
+                    [% l('Full Catalog') %]
+                </span></a>
+            [% ELSE %]
+                <a href="[% mkurl(ctx.opac_root _ '/home', {physical_dept => 'ys'}) %]"
+                    class="tbutton medium tadlblue" id="home_theme_link"><span>
+                    [% l('Kids\' Catalog') %]
+                </span></a>
+            [% END %]
             <a href="https://www.tadl.org/register"
                 class="tbutton medium tadlblue" id="home_register_link"><span>
                 [% l('Register') %]
@@ -21,6 +32,17 @@
         </div>
         [% ELSE %]
         <div id="dash_wrapper">
+            [% IF ctx.physical_dept == 'ys' -%]
+                <a href="[% mkurl(ctx.opac_root _ '/home', {physical_dept => 'default'}) %]"
+                    class="tbutton medium tadlblue" id="home_theme_link"><span>
+                    [% l('Full Catalog') %]
+                </span></a>
+            [% ELSE %]
+                <a href="[% mkurl(ctx.opac_root _ '/home', {physical_dept => 'ys'}) %]"
+                    class="tbutton medium tadlblue" id="home_theme_link"><span>
+                    [% l('Kids\' Catalog') %]
+                </span></a>
+            [% END %]
             <div id="dash_identity">
                 <span id="dash_user">
                     [%  l('[_1] [_2]', ctx.user.first_given_name, ctx.user.family_name) | html %]

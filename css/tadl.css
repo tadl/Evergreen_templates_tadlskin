@@ -158,6 +158,9 @@ span.dash_divider {
     top: 15px;
 }
 
+#home_theme_link {
+    float:right;
+}
 #dash_identity {
     float:right;
 }
