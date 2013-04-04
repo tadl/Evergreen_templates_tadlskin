@@ -74,6 +74,10 @@
                         Author
                     </span>
                 </td>
+                <td style="padding-right:5px;" align="center">
+                    <span title="Click to sort" class='pointer'>Format
+                    </span>
+                </td>
                 <td width="8%" style="padding-right:5px;" align="center">
                     <span title="Click to sort" class='pointer'>Renews<br />Left
                     </span>
@@ -116,6 +120,11 @@
                             ) %]">[% attrs.author | html %]</a>
                             [% END %]
                         </td>
+			<td>
+                            [% IF attrs.format_icon %]
+                            <img title="[% attrs.format_label | html %]" alt="[% attrs.format_label | html %]" src="[% attrs.format_icon %]" />
+                            [% END %]
+			</td>
                         <td width="8%" name="renewals" align="center" style="vertical-align:top;">
                             [% circ.circ.renewal_remaining %]
                         </td>
