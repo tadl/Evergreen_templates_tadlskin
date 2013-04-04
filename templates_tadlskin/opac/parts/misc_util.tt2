@@ -295,5 +295,13 @@
             END;
         END;
 
+        IF !args.format_label AND !args.format_icon;
+            node = xml.findnodes(
+                '//*[local-name()="leader"]');
+            type = node.textContent.substr(6,1);
+            args.format_label = type;
+            args.format_icon = ctx.media_prefix _ '/images/format_icons/item_type/' _ type _ '.png';
+        END;
+
     END;
 %]
