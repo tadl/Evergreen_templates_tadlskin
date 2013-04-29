@@ -20,7 +20,7 @@ function coverErrorReport() {
     var xmlhttp;
     if (window.XMLHttpRequest && recordIds[0] != null) {
         xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET","//www.tadl.org/test/harvest.php?ids="+recordIds,true);
+        xmlhttp.open("GET","//www.tadl.org/covers/harvest.php?ids="+recordIds,true);
         xmlhttp.send();
     }
 }
