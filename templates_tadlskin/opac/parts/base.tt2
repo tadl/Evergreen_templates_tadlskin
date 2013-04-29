@@ -15,11 +15,35 @@
         [% END %]
         <link rel="stylesheet" type="text/css" href="[% ctx.media_prefix %]/css/skin/default/opac/semiauto.css" />
         <link rel="stylesheet" type="text/css" href="[% ctx.media_prefix %]/css/skin/tadl/opac/tadl.css" />
+<script>
+function coverErrorReport() {
+    var xmlhttp;
+    if (window.XMLHttpRequest && recordIds[0] != null) {
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET","//www.tadl.org/test/harvest.php?ids="+recordIds,true);
+        xmlhttp.send();
+    }
+}
+var recordIds = new Array();
+function addRecordId(url) {
+    var id = url.substring(url.lastIndexOf('/')+1);
+    recordIds.push(id);
+}
+function testImage(url) {
+    var img = new Image();
+    img.onload = function() {
+        if (this.width == 1) {
+            addRecordId(url);
+        }
+    }
+    img.src = url;
+}
+</script>
         <title>[% l('Catalog - [_1]', ctx.page_title) %]</title>
         <link rel="unapi-server" type="application/xml" title="unAPI" href="/opac/extras/unapi" />
         [% INCLUDE 'opac/parts/goog_analytics.tt2' %]
     </head>
-    <body[% IF want_dojo; ' class="tundra"'; END %][% IF ctx.physical_dept == 'ys'; ' class="ys"'; END %]>
+    <body[% IF want_dojo; ' class="tundra"'; END %][% IF ctx.physical_dept == 'ys'; ' class="ys"'; END %] onload="coverErrorReport();">
         [% content %] 
         [% INCLUDE 'opac/parts/footer.tt2' %]
         [% INCLUDE 'opac/parts/js.tt2' %]
