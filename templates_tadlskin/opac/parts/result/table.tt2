@@ -52,8 +52,10 @@
 						%]
                                                 <a href="[% mkurl(ctx.opac_root _ '/record/' _ rec.id) %]"><img alt="[% l('Image of item') %]"
                                                         name='item_jacket' class='result_table_pic' width="100"
-                                                        onerror="this.style.display='none';addRecordId('[% jacket_src %]');"
+                                                        onerror="this.style.display='none';[% IF !ctx.is_staff %]addRecordId('[% jacket_src %]');[% END %]"
+							[% IF !ctx.is_staff %]
                                                         onload="testImage('[% jacket_src %]');"
+							[% END %]
                                                         src='[% jacket_src %]' /></a><br />
                                             </td>
                                             <td class='result_table_title_cell' name='result_table_title_cell'>
