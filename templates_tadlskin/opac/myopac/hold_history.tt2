@@ -62,7 +62,7 @@
 
                     <td style="vertical-align:top;">
                         <div style="margin-top:10px;margin-bottom:10px;vertical-align:top;">
-                            <a href="[% mkurl(ctx.opac_root _ '/record/' _ hold.hold.bre_id) %]"><img src="/opac/extras/ac/jacket/small/r/[% hold.hold.bre_id %]" style="float:left;padding-right:5px;"/>[% attrs.title | html %]</a>
+                            <a href="[% mkurl(ctx.opac_root _ '/record/' _ hold.hold.bre_id) %]"><img src="/opac/extras/ac/jacket/small/r/[% hold.hold.bre_id %]" style="float:left;padding-right:5px;" onerror="this.style.display='none';" />[% attrs.title | html %]</a>
                         </div>
                     </td>
                     <td style="vertical-align:top;">

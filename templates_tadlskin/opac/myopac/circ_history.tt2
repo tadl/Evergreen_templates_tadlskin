@@ -76,7 +76,7 @@
                     <tr style="font-size:1.2em;">
                         <td style="padding-left:5px;padding-bottom:10px;vertical-align:top;">
                             <a href="[% mkurl(ctx.opac_root _ '/record/' _ circ.circ.target_copy.call_number.record.id) %]" 
-                                name="[% l('Catalog record') %]"><img src="/opac/extras/ac/jacket/small/r/[% circ.circ.target_copy.call_number.record.id %]" style="float:left;padding-right:5px;"/>[% attrs.title | html %]</a>
+                                name="[% l('Catalog record') %]"><img src="/opac/extras/ac/jacket/small/r/[% circ.circ.target_copy.call_number.record.id %]" style="float:left;padding-right:5px;" onerror="this.style.display='none';" />[% attrs.title | html %]</a>
                             [% IF attrs.author %] /
                             <a href="[% mkurl(ctx.opac_root _ '/results',
                                 {qtype => 'author', query => attrs.author.replace('[,\.:;]', '')}

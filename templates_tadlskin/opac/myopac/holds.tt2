@@ -141,7 +141,7 @@
                                     title = l('[_1] ([_2])', title, hold.hold.part.label);
                                 END;
                             %]
-                            <a href="[% mkurl(ctx.opac_root _ '/record/' _ hold.hold.bre_id) %]"><img src="/opac/extras/ac/jacket/small/r/[% hold.hold.bre_id %]" style="float:left;padding-right:5px;"/>[% title | html %]</a>
+                            <a href="[% mkurl(ctx.opac_root _ '/record/' _ hold.hold.bre_id) %]"><img src="/opac/extras/ac/jacket/small/r/[% hold.hold.bre_id %]" style="float:left;padding-right:5px;" onerror="this.style.display='none';" />[% title | html %]</a>
                         </div>
                     </td>
                     <td width="123" style="vertical-align:top;">
