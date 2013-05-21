@@ -9,6 +9,7 @@ item_formats = [
     { 'code' => 'g', 'value' => 'Video Recordings' },
     { 'code' => 'j', 'value' => 'Music' },
     { 'code' => 'm', 'value' => 'Streaming Video and Online Books' },
+    { 'code' => 'mVG-', 'value' => 'Video Games' },
 ];
 %]
 
