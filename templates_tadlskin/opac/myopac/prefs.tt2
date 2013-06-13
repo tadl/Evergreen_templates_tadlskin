@@ -123,7 +123,7 @@
 
             <tr>
                 <td class='color_4 light_border'>[% l("Active Barcode") %]</td>
-                <td class='light_border'>[% ctx.user.card.barcode %]</td>
+                <td class='light_border'><span class="active_barcode">[% ctx.user.card.barcode %]</span></td>
                 <td></td>
             </tr>
 
