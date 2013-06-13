@@ -77,4 +77,36 @@
 </script>
 [% END; # use_autosuggest %]
 
+[%- # Add an event handler to append a facet for subject|genre[game] if Video Games is chosen %]
+
+<script type="text/javascript">
+// handle the instance where Video Games is selected on page load
+dojo.addOnLoad(function() {
+	var item_format_selector = dojo.byId('item_format_selector');
+	var search_form = document.forms[0];
+	if (item_format_selector.value == 'mVG-') {
+		dojo.create('input', {id:"search_facet_field", name:"facet", type:"hidden", value: 'subject|genre[game]'}, search_form);
+	} else {
+		if (dojo.byId('search_facet_field')) {
+			dojo.destroy(dojo.byId('search_facet_field'));
+		}
+	}
+});
+
+// add an event handler for when Video Games is selected/de-selected
+dojo.addOnLoad(function() {
+	var item_format_selector = dojo.byId('item_format_selector');
+	item_format_selector.onchange=function () {
+		var search_form = document.forms[0];
+		if (this.value == 'mVG-') {
+			dojo.create('input', {id:"search_facet_field", name:"facet", type:"hidden", value: 'subject|genre[game]'}, search_form);
+		} else {
+			if (dojo.byId('search_facet_field')) {
+				dojo.destroy(dojo.byId('search_facet_field'));
+			}
+		}
+	}
+});
+</script>
+
 [%- END; # want_dojo -%]
