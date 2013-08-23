@@ -355,8 +355,7 @@ span.dash_divider {
 #acct_fines_tabs,
 #acct_checked_tabs,
 #acct_holds_tabs,
-#acct_prefs_tabs,
-#results_header_inner{
+#acct_prefs_tabs{
 	height: 40px;
 }
 #acct_tabs,
@@ -846,8 +845,8 @@ div.format_icon {
 }
 
 #results_header_inner {
-    height: 42px;
-    padding-top:3px;
+    height:42px;
+    padding:3px 0;
 }
 
 .cached_list_div { width: 111px; height: 25px; }
