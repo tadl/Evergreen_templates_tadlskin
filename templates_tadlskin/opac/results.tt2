@@ -59,7 +59,7 @@
                     </label>
                     <div class="results_header_div"></div>
                     <div class="float-left">
-                         <a class="tbutton small tadlblue" href="http://elibrary.mel.org/search/a?searchtype=X&amp;searcharg=[% CGI.param('query') | html %]&amp;SORT=D" style="padding:0;"><span style="padding:5px 8px;"><img src="/images/tadl/button-search-melcat.png" style="width:100px;" alt="Search MeLCat!" /></span></a>
+                         <a class="tbutton small tadlblue" href="http://elibrary.mel.org/search/a?searchtype=X&amp;searcharg=[% CGI.param('query') | uri | html %]&amp;SORT=D" style="padding:0;"><span style="padding:5px 8px;"><img src="/images/tadl/button-search-melcat.png" style="width:100px;" alt="Search MeLCat!" /></span></a>
                     </div>
                 <div class="clear-both"></div>
             </div>
