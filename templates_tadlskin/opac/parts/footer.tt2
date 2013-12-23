@@ -31,6 +31,7 @@
     </div>
 </div>
 </div>
+[% IF !ctx.is_staff %]
 <!-- Piwik -->
 <script type="text/javascript">
 var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.tadl.org/piwik/" : "http://www.tadl.org/piwik/");
@@ -51,3 +52,4 @@ piwikTracker.enableLinkTracking();
 </script><noscript><p><img src="https://www.tadl.org/piwik/piwik.php?idsite=9" style="border:0" alt="" /></p></noscript>
 [% END %]
 <!-- End Piwik Tracking Code -->
+[% END %]
