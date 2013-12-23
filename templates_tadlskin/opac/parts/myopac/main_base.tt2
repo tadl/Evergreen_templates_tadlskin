@@ -21,6 +21,7 @@
                 <p style="font-size: 1.2em;">You do not currently have a holdshelf alias set.</p>
         [% END %]
                 <p style="font-size: 1em;"><a href="[% mkurl(ctx.opac_root _ '/myopac/update_alias') %]">change</a> - <a href="http://www.tadl.org/creating-alias-holds-shelf">what's an alias?</a></p>
+                <p>Your MeLCat ID is: [% ctx.user.id %]</p>
 	</div>
     </div>
     [% ELSE %]
@@ -61,6 +62,7 @@
                 <p style="font-size: 1.2em;">You do not currently have a holdshelf alias set.</p>
         [% END %]
                 <p style="font-size: 1em;"><a href="[% mkurl(ctx.opac_root _ '/myopac/update_alias') %]">change</a> - <a href="http://www.tadl.org/creating-alias-holds-shelf">what's an alias?</a></p>
+                <p>Your MeLCat ID is: [% ctx.user.id %]</p>
         </div>
     </div>
     [% END %]
