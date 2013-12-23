@@ -74,7 +74,7 @@ facet.display = [
     {facet_class => 'author',  facet_order => ['personal', 'corporate']},
     {facet_class => 'series',  facet_order => ['seriestitle']},
 ];
-
+facet.default_display_count = 10;
 
 ##############################################################################
 # TADL overrides for display
