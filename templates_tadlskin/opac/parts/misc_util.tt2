@@ -205,6 +205,9 @@
                     res.href = uri.getAttribute('href');
                     res.link = uri.getAttribute('label');
                     res.note = uri.getAttribute('use_restriction');
+                    IF res.link.match('^http');
+                        res.link = 'Connect to this resource online';
+                    END;
                     args.uris.push(res);
                     IF res.href.match('^http://via.tadl.org/');
                         args.ezproxy = 1;
