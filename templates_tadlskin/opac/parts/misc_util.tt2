@@ -43,13 +43,13 @@
         titresults = xml.findnodes('//*[@tag="245"]/*[@code="a" or @code="b" or @code="n" or @code="p"]');
         titresults_content = [];
             FOR sub IN titresults;
-                IF sub.getAttribute('code') == 'a';
+                IF sub.getAttribute('code') == 'a' && tc.defined;
                     titresults_content.push(tc.title(sub.textContent.replace(' :$',':')));
-		ELSIF sub.getAttribute('code') == 'b';
+                ELSIF sub.getAttribute('code') == 'b' && tc.defined;
                     titresults_content.push(tc.title(sub.textContent));
                 ELSE;
                     titresults_content.push(sub.textContent);
-		END;
+                END;
             END;
         args.title = titresults_content.join(" ");
         # Avoid ugly trailing syntax on brief titles
@@ -59,9 +59,9 @@
         titsubs = xml.findnodes('//*[@tag="245"]/*[@code]');
         titsubs_content = [];
             FOR sub IN titsubs;
-                IF sub.getAttribute('code') == 'a';
+                IF sub.getAttribute('code') == 'a' && tc.defined;
                     titsubs_content.push(tc.title(sub.textContent.replace(' :$',':')));
-                ELSIF sub.getAttribute('code') == 'b';
+                ELSIF sub.getAttribute('code') == 'b' && tc.defined;
                     titsubs_content.push(tc.title(sub.textContent));
                 ELSE;
                     titsubs_content.push(sub.textContent);
