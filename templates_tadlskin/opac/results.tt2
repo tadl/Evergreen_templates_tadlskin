@@ -43,10 +43,12 @@
                     <div class="results_header_div"></div>
 
                     <div class="float-left">
-                        [% IF CGI.param('detail_record_view') %]
-                        <a class="tbutton small tadlblue" href="[% mkurl('', {detail_record_view => ''}) %]"><span>[% l('Show Fewer Details') %]</span></a>
-                        [% ELSE %]
-                        <a class="tbutton small tadlblue" href="[% mkurl('', {detail_record_view => 1}) %]"><span>[% l('Show More Details') %]</span></a>
+                        [% IF !ctx.is_staff %]
+                            [% IF CGI.param('detail_record_view') %]
+                            <a class="tbutton small tadlblue" href="[% mkurl('', {detail_record_view => ''}) %]"><span>[% l('Show Fewer Details') %]</span></a>
+                            [% ELSE %]
+                            <a class="tbutton small tadlblue" href="[% mkurl('', {detail_record_view => 1}) %]"><span>[% l('Show More Details') %]</span></a>
+                            [% END %]
                         [% END %]
                     </div>
                     <div class="results_header_div"></div>
