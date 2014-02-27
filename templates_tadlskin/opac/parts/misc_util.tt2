@@ -111,7 +111,7 @@
             subtext = sub.textContent;
             args.contents_list.push(subtext _ ' ');
             IF (subcode == 'a' OR subcode == 't');
-                args.contents_simple_list.push(subtext _ ' ')
+                args.contents_simple_list.push(subtext _ ' ');
             END;
         END;
         args.contents = args.contents_list.join(" ");
