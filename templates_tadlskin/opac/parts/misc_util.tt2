@@ -109,6 +109,7 @@
             args.contents_list.push(sub.textContent);
         END;
         args.contents = args.contents_list.join(" ");
+        args.summaries.push(args.contents);
         args.content = (args.contents.size) ? args.contents.0 : '';
 
         # MARC Callnumber
