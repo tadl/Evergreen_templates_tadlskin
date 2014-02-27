@@ -76,7 +76,9 @@
                     IF name == 'marchtml';
                         ctx.marchtml;
                     ELSIF name == 'contents';
-                        attrs.contents;
+                        FOREACH contents IN attrs.contents; -%]
+                        <p>[% contents %]</p>
+                        [% END;
                     ELSE;
                         # Load the template for the selected extra
                         INCLUDE "opac/parts/record/${name}.tt2";

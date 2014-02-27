@@ -103,6 +103,13 @@
                                                                 </td>
                                                         </tr>
                                                         [% END %]
+                                                        [% IF args.contents && args.summaries.size < 1 %]
+                                                        <tr name='bib_contents' class='result_table_summary'>
+                                                                <td valign='top' colspan='2' class='result_table_summary'>
+                                                                    [% args.contents.0 | truncate(200) %]
+                                                                </td>
+                                                        </tr>
+                                                        [% END %]
 
                                                         [% IF CGI.param('detail_record_view') || ctx.is_staff %]
                                                         <!-- These fields are visible when viewing the results page in 'detailed' mode -->

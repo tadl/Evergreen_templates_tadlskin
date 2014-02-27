@@ -78,6 +78,9 @@
 	[%- FOREACH summary IN args.summaries %]
 	<p>[% summary %]</p>
 	[%- END %]
+	[%- FOREACH contents IN args.contents %]
+	<p>[% contents %]</p>
+	[%- END %]
 	</div>
     </div>
 </div>
