@@ -109,7 +109,7 @@
         FOR sub IN xml.findnodes('//*[@tag="505"]');
             subcode = sub.getAttribute("code");
             subtext = sub.textContent;
-            args.contents_list.push(subtext _ ' ');
+            args.contents_list.push(subtext _ ' BREAK ');
             IF (subcode == 'a' OR subcode == 't');
                 args.contents_simple_list.push(subtext _ ' ');
             END;
