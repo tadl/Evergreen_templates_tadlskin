@@ -105,8 +105,14 @@
         args.phys_desc = phys_content.join(" ");
 
         args.contents_list = [];
+        args.contents_simple_list = [];
         FOR sub IN xml.findnodes('//*[@tag="505"]');
-            args.contents_list.push(sub.textContent);
+            subcode = sub.getAttribute("code");
+            subtext = sub.textContent;
+            args.contents_list.push(subtext _ ' ');
+            IF (subcode == 'a' OR subcode == 't');
+                args.contents_simple_list.push(subtext _ ' ')
+            END;
         END;
         args.contents = args.contents_list.join(" ");
         args.summaries.push(args.contents);
