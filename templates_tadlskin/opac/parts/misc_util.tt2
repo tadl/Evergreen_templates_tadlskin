@@ -107,7 +107,7 @@
         args.contents_list = [];
         args.contents_simple_list = [];
         FOR tag IN xml.findnodes('//*[@tag="505"]');
-            FOR sub IN tag.findnodes(".//subfield);
+            FOR sub IN tag.findnodes(".//subfield");
                 subcode = sub.getAttribute("code");
                 subtext = sub.textContent;
                 args.contents_list.push(subtext _ ' BREAK ');
