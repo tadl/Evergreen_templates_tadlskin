@@ -76,10 +76,12 @@
         [%- INCLUDE "opac/parts/record/authors.tt2" %]
 	<div id='rdetail_summary_from_rec'>
 	[%- FOREACH summary IN args.summaries %]
-	<p>[% summary %]</p>
+	<p class="rec-summary">[% summary %]</p>
 	[%- END %]
+	</div>
+	<div id='rdetail_contents_from_rec'>
 	[%- FOREACH contents IN args.contents %]
-	<p>[% contents %]</p>
+	<p class="rec-contents">[% contents %]</p>
 	[%- END %]
 	</div>
     </div>
