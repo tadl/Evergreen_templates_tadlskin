@@ -102,7 +102,8 @@
                                                                     [% args.summaries.0 | truncate(200) %]
                                                                 </td>
                                                         </tr>
-                                                        [% ELSIF args.contents %]
+                                                        [% END %]
+                                                        [% IF args.contents && args.summaries.size < 1 %]
                                                         <tr name='bib_contents' class='result_table_summary'>
                                                                 <td valign='top' colspan='2' class='result_table_summary'>
                                                                     [% args.contents.0 | truncate(200) %]
