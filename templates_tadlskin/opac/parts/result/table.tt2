@@ -221,6 +221,7 @@
                                                         [% note.note | html %]
                                                     </div>
                                                         [% END %]
+                                                        <abbr class="list-item-id" title="[% ctx.bookbag_items_by_bre_id.$rec_id.id %]"></abbr>
                                                     [% END %]
                                                 </div>
                                             </td>
