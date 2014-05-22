@@ -20,6 +20,9 @@
     <div class="result-bookbag-description">[% ctx.bookbag.description | html %]</div>
 </div>
 [% END %]
+[% IF ctx.my_bookbag %]
+<div id="this_is_my_list"></div>
+[% END %]
 <div id="result_table_div">
             <div class="facet_sidebar">
                 [% INCLUDE "opac/parts/staff_saved_searches.tt2" %]
