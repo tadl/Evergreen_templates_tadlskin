@@ -29,6 +29,10 @@
                 class="tbutton medium tadlblue" id="home_register_link"><span>
                 [% l('Register') %]
             </span></a>
+            <a href="https://summer.tadl.org/"
+                class="tbutton medium tadlblue" id="home_summer_link"><span>
+                [% l('Summer Reading') %]
+            </span></a>
         </div>
         [% ELSE %]
         <div id="dash_wrapper">
@@ -51,6 +55,10 @@
                 <a href="[% mkurl(ctx.opac_root _ '/myopac/main') %]" 
                     class="tbutton small tadlblue"><span>[% l('My Account') %]</span></a>
 
+                <a href="https://summer.tadl.org/"
+                    class="tbutton small tadlblue" id="home_summer_link"><span>
+                    [% l('Summer Reading') %]
+                </span></a>
                 <a href="[% mkurl(ctx.opac_root _ '/logout', {}, 1) %]"
                     class="tbutton small tadlblue" id="logout_link"><span>[% l('Logout') %]</span></a>
             </div>
