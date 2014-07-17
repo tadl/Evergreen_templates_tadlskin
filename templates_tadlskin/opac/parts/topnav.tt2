@@ -29,10 +29,6 @@
                 class="tbutton medium tadlblue" id="home_register_link"><span>
                 [% l('Register') %]
             </span></a>
-            <a href="https://summer.tadl.org/"
-                class="tbutton medium tadlblue" id="home_summer_link"><span>
-                [% l('Summer Reading') %]
-            </span></a>
         </div>
         [% ELSE %]
         <div id="dash_wrapper">
