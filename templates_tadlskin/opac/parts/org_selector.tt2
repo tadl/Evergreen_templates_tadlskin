@@ -67,6 +67,8 @@ BLOCK build_org_selector;
             # This org unit is not publicly visible (though its children may be).
             NEXT UNLESS ctx.is_staff OR visible;
             NEXT IF ou_id == 1; # TADL hack to hide root of tree
+            NEXT IF ou_id == 43; # hide KCLSYS in TADL skin
+            NEXT IF ou_id == 44; # hide KCL in TADL skin
 
             node_value = ou_id;
             IF loc_grp;
