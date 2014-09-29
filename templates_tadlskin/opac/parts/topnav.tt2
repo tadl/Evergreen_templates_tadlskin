@@ -51,10 +51,6 @@
                 <a href="[% mkurl(ctx.opac_root _ '/myopac/main') %]" 
                     class="tbutton small tadlblue"><span>[% l('My Account') %]</span></a>
 
-                <a href="https://www.tadl.org/summer-redirect/summer-redirect.cgi"
-                    class="tbutton small tadlblue" id="home_summer_progress_link"><span>
-                    [% l('Summer Reading Progress') %]
-                </span></a>
                 <a href="[% mkurl(ctx.opac_root _ '/logout', {}, 1) %]"
                     class="tbutton small tadlblue" id="logout_link"><span>[% l('Logout') %]</span></a>
             </div>
