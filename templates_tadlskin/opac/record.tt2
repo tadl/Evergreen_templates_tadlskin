@@ -20,4 +20,9 @@
         </div>
         <br class="clear-both" />
     </div>
+    [% IF !ctx.is_staff AND !ctx.physical_loc.defined %]
+    <script type="text/javascript" src="[% ctx.media_prefix %]/js/tadl/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">var tadljq = jQuery.noConflict(true);</script>
+    <script type="text/javascript" src="[% ctx.media_prefix %]/js/tadl/trailertank.js"></script>
+    [% END %]
 [% END %]
