@@ -51,21 +51,24 @@
             END;
         END;
 
-        # Include subfields 'abnp' to generate a more comprehensive title display in search results
-        titresults = xml.findnodes('//*[@tag="245"]/*[@code="a" or @code="b" or @code="n" or @code="p"]');
+        titresults = xml.findnodes('//*[@tag="245"]/*[@code]');
         titresults_content = [];
             FOR sub IN titresults;
                 IF sub.getAttribute('code') == 'a' && tc.defined;
                     titresults_content.push(tc.title(sub.textContent.replace(' :$',':')));
                 ELSIF sub.getAttribute('code') == 'b' && tc.defined;
                     titresults_content.push(tc.title(sub.textContent));
+                ELSIF sub.getAttribute('code') == 'c';
+                    # omit subfield c
+                ELSIF sub.getAttribute('code') == 'h' && (matches = sub.textContent.match('([:;/])\W*$'));
+                    titresults_content.push(matches.0);
                 ELSE;
                     titresults_content.push(sub.textContent);
                 END;
             END;
         args.title = titresults_content.join(" ");
         # Avoid ugly trailing syntax on brief titles
-        args.title = args.title | replace('[:;/]$', '');
+        args.title = args.title | replace('\W*[:;/]\W*$', '');
         IF args.large_print == 1;
             args.title = args.title _ " (LARGE PRINT)";
         END;
