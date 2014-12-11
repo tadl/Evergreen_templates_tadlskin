@@ -60,8 +60,11 @@
                     titresults_content.push(tc.title(sub.textContent));
                 ELSIF sub.getAttribute('code') == 'c';
                     # omit subfield c
-                ELSIF sub.getAttribute('code') == 'h' && (matches = sub.textContent.match('([:;/])\W*$'));
-                    titresults_content.push(matches.0);
+                ELSIF sub.getAttribute('code') == 'h';
+                    # preserve some punctuation from subfield h or omit completely
+                    IF (matches = sub.textContent.match('([:;/])\W*$'));
+                        titresults_content.push(matches.0);
+                    END;
                 ELSE;
                     titresults_content.push(sub.textContent);
                 END;
