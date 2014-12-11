@@ -62,7 +62,7 @@
                     # omit subfield c
                 ELSIF sub.getAttribute('code') == 'h';
                     # preserve some punctuation from subfield h or omit completely
-                    IF (matches = sub.textContent.match('([:;/])\W*$'));
+                    IF (matches = sub.textContent.match('([:;/])\s*$'));
                         titresults_content.push(matches.0);
                     END;
                 ELSE;
@@ -71,7 +71,7 @@
             END;
         args.title = titresults_content.join(" ");
         # Avoid ugly trailing syntax on brief titles
-        args.title = args.title | replace('\W*[:;/]\W*$', '');
+        args.title = args.title | replace('\s*[:;/]\s*$', '');
         IF args.large_print == 1;
             args.title = args.title _ " (LARGE PRINT)";
         END;
