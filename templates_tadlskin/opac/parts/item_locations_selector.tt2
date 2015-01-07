@@ -3,13 +3,13 @@
 # These are displayed in the order shown
 IF dept == 'ys';
     item_locations = [
-        { 'code' => '527,531,530,532,791,795,529,793,528,794,792,571,516,593,771,770,542,589,549', 'value' => 'Juvenile' },
-	{ 'code' => '792', 'indent' => 1, 'value' => 'Nonfiction' },
-	{ 'code' => '791,795,529,793,528,794', 'indent' => 1, 'value' => 'Fiction' },
-	{ 'code' => '529,793', 'indent' => 1, 'value' => ' - Easy (JE / Red)' },
-	{ 'code' => '528,794', 'indent' => 1, 'value' => ' - Easy Plus (JE+ / Pink)' },
-	{ 'code' => '791,795', 'indent' => 1, 'value' => ' - J FIC (Blue)' },
+        { 'code' => '527,531,530,532,791,795,529,793,528,794,792,571,516,593,771,770,542,589,549,819,818,817,815,810,813,809', 'value' => 'Juvenile' },
+        { 'code' => '792', 'indent' => 1, 'value' => 'Nonfiction' },
+        { 'code' => '791,795,529,793,528,794,810,813,819', 'indent' => 1, 'value' => 'Fiction' },
         { 'code' => '571', 'indent' => 1, 'value' => 'Audiobooks' },
+        { 'code' => '809', 'indent' => 1, 'value' => 'Foreign Language' },
+        { 'code' => '817', 'indent' => 1, 'value' => 'Graphic Novels' },
+        { 'code' => '818', 'indent' => 1, 'value' => 'Holidays' },
         { 'code' => '516,593,771', 'indent' => 1, 'value' => 'Movies' },
         { 'code' => '770', 'indent' => 1, 'value' => 'Music' },
         { 'code' => '542,589', 'indent' => 1, 'value' => 'Multimedia Kits' },
