@@ -262,7 +262,6 @@
                                                                     name="place_hold_link" class="tbutton small green">
                                                                 <span>[% l('Place Hold') %]</span></a>
                                                         <!--</div>-->
-                                                        [% END %]
                                                         <!--<div class="results_aux_utils result_util">--><br />
                                                             [%  
                                                                 operation = ctx.mylist.grep(rec.id).size ? "delete" : "add";
@@ -274,6 +273,7 @@
                                                                 [% label %]
                                                             </span></a>
                                                         </div>
+                                                        [% END %]
                                                         [% IF ENV.OILS_CONTENT_CAFE_USER %]
                                                         <div class="results_aux_utils result_util">
                                                             <a title="[% l('Reviews and More') %]" target='_blank' 
