@@ -98,6 +98,13 @@
                                                                 </td>
                                                         </tr>
                                                         [% END %]
+                                                        [% IF args.hoopla %]
+                                                        <tr name='bib_uri_list' class='result_table_title_cell'>
+                                                                <td valign='top'>
+                                                                        <a href="[% args.uris.0.href %]" class="tbutton small tadlblue"><span>[% args.uris.0.note %]</span></a>
+                                                                </td>
+                                                        </tr>
+                                                        [% END %]
 
                                                         [% IF args.summaries %]
                                                         <tr name='bib_summary' class='result_table_summary'>
@@ -255,7 +262,7 @@
                                             <td nowrap='nowrap' width="1" align="right">
                                                 <div class="result_table_utils_cont">
                                                     <div class="result_table_utils">
-                                                        [% IF !args.ezproxy %]
+                                                        [% IF !args.ezproxy AND !args.hoopla %]
                                                         <div class="results_aux_utils result_util"><a
                                                                 href="[% mkurl(ctx.opac_root _ '/place_hold', 
                                                                     {hold_target => rec.id, hold_type => 'T', hold_source_page => mkurl()}) %]" 

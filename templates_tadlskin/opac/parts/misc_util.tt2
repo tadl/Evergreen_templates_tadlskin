@@ -170,6 +170,16 @@
                 });
             END;
         END;
+
+        FOR node IN xml.findnodes('//*[@tag="856" and @ind1="4" and @ind2="2"]');
+            note = node.findnodes('./*[@code="z"]');
+            IF note.textContent == 'Cover image';
+                href = node.findnodes('./*[@code="u"]');
+                IF href.textContent.match('^https');
+                    args.cover_url = href.textContent;
+                END;
+            END;
+        END;
  
         args.holdings = [];
         args.uris = [];
@@ -244,6 +254,9 @@
                             args.cover_url = 'https://secure.films.com/Common/FMGimages/' _ avod_xtid.0 _ '_full.jpg';
                             args.widget_html = "<iframe height='310' frameborder='0' width='348' src='https://www.tadl.org/avod/play.cgi?xtid=" _ avod_xtid.0 _ "'  >&nbsp;</iframe>";
                         END;
+                    END;
+                    IF res.href.match('^https://www.hoopladigital.com/');
+                        args.hoopla = 1;
                     END;
                 END;
                 NEXT;
