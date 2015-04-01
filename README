@@ -18,3 +18,8 @@ your Apache server's OILSWebTemplatePath variable.
 A full copy of the rel_2_2 opac templates has been placed in
 templates_tadlskin for convenience while testing and developing. We'll
 likely remove the unchanged templates at some point.
+
+
+Whatever
+=====
+Do the thing. Whatever.
