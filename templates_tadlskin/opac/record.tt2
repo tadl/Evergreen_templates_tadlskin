@@ -24,5 +24,6 @@
     <script type="text/javascript" src="[% ctx.media_prefix %]/js/tadl/jquery-1.11.1.min.js"></script>
     <script type="text/javascript">var tadljq = jQuery.noConflict(true);</script>
     <script type="text/javascript" src="[% ctx.media_prefix %]/js/tadl/trailertank.js"></script>
+    <script type="text/javascript" src="[% ctx.media_prefix %]/js/tadl/goodreads.js"></script>
     [% END %]
 [% END %]
