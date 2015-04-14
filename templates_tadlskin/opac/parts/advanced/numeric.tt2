@@ -2,7 +2,6 @@
     <div class="header_middle">[% l("Numeric Search") %]</div>
     <input type="hidden" name="contains" value="contains" />
     <input type="hidden" name="_special" value="1" />
-    [% IF loc %]<input type="hidden" name="loc" value="[% loc %]" />[% END %]
     <table>
         <tr>
             <td>
@@ -21,6 +20,16 @@
                 <input type="text" name="query" size="16" />
             </td>
         </tr>
+	    <tr>
+            <td>
+                [%- lib_select_id="numeric_search_library" -%]
+                <label for="[% lib_select_id %]"><strong>[% l("Search Library:") %]</strong>
+                      [% PROCESS "opac/parts/org_selector.tt2";
+                         INCLUDE build_org_selector id=lib_select_id show_loc_groups=1
+                      %]
+                </label>
+            </td>
+	    </tr>
         <tr>
             <td colspan="2" align="right">
                 <input type="submit" alt="[% l('Search') %]"
