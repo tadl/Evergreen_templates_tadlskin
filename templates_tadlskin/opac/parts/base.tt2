@@ -14,7 +14,7 @@
         </style>
         [% END %]
         <link rel="stylesheet" type="text/css" href="[% ctx.media_prefix %]/css/skin/default/opac/semiauto.css" />
-        <link rel="stylesheet" type="text/css" href="[% ctx.media_prefix %]/css/skin/tadl/opac/tadl.css" />
+        <link rel="stylesheet" type="text/css" href="[% ctx.media_prefix %]/css/skin/tadl/opac/tadl-youth.css" />
 [% IF !ctx.is_staff %]
 <script>
 function coverErrorReport() {
