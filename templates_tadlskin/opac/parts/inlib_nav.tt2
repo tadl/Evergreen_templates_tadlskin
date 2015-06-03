@@ -1,7 +1,3 @@
 <div id="inlib_nav" style="width: 100%; height: 30px;">
-[% IF ctx.physical_dept == 'ys' -%]
 <iframe id="inlib_nav_frame" width="100%" height="29px" style="border: none;" src="http://pcres.lib.tadl.org/inlib_nav_ys.html" scrolling="no"></iframe>
-[% ELSE -%]
-<iframe id="inlib_nav_frame" width="100%" height="29px" style="border: none;" src="http://pcres.lib.tadl.org/inlib_nav.html" scrolling="no"></iframe>
-[% END -%]
 </div>

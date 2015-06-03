@@ -1,5 +1,5 @@
 [% PROCESS "opac/parts/org_selector.tt2" %]
-<div id="search-box"[% IF ctx.physical_dept == 'ys'; ' class="ys"'; END %]>    
+<div id="search-box" class="ys">
     [% UNLESS took_care_of_form -%]
     <form action="[% ctx.opac_root %]/results" method="GET">
     [%- END %]
@@ -28,11 +28,7 @@
     </div>
     <div class="searchbar">
         [%- INCLUDE "opac/parts/qtype_selector.tt2" id="qtype"; %]
-        [%- IF ctx.physical_dept == 'ys' %]
             [%- INCLUDE "opac/parts/item_locations_selector.tt2" dept='ys'; %]
-        [%- ELSE %]
-            [%- INCLUDE "opac/parts/item_format_selector.tt2" none_ok=1 none_label=l('All Formats'); %]
-        [%- END %]
         [%- INCLUDE build_org_selector show_loc_groups=1 id='location_selector' %]
     </div>
     [% IF ctx.bookbag %]

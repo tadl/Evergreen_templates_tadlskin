@@ -41,7 +41,7 @@
         <br />
     </div>
 
-    <div id="rdetail_actions_div"[% IF ctx.physical_dept == 'ys'; ' class="ys"'; END %]>
+    <div id="rdetail_actions_div" class="ys">
 	[% IF !args.ezproxy AND !args.hoopla %]
 				<div class="rdetail_aux_utils rdetail_aux_copycounts">
 					[%- INCLUDE "opac/parts/record/copy_counts.tt2" %]

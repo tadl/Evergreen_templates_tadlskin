@@ -13,8 +13,8 @@
     <div id="search-wrapper">
         [% INCLUDE "opac/parts/searchbar.tt2" %]
     </div>
-    <div id="content-wrapper"[% IF ctx.physical_dept == 'ys'; ' class="ys"'; END %]>
-        <div id="myopac_tabs"[% IF ctx.physical_dept == 'ys'; ' class="ys"'; END %]>
+    <div id="content-wrapper" class="ys">
+        <div id="myopac_tabs" class="ys">
             <div id="acct_tabs">
                 [%- FOREACH page IN myopac_pages;
                     IF page.url == myopac_page;

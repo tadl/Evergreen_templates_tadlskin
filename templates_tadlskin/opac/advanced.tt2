@@ -6,13 +6,13 @@
     loc = ctx.search_ou;
 -%]
     <div id="search-wrapper">
-        <div id="search-box"[% IF ctx.physical_dept == 'ys'; ' class="ys" style="margin-top:10px;padding:10px 0 0 15px;"'; END %]>
+        <div id="search-box" class="ys" style="margin-top:10px;padding:10px 0 0 15px;">
             <span class="search_catalog_lbl">[% l('Search the Catalog') %]</span>
             <a href="[% mkurl(ctx.opac_root _ '/home') %]"
                 id="home_adv_search_link"><span
                 class="adv_search_font">[%l('Basic Search')%]</span></a>
         </div>
-        <div id="adv_search_parent"[% IF ctx.physical_dept == 'ys'; ' class="ys"'; END %]>
+        <div id="adv_search_parent" class="ys">
             <div id="adv_search_tabs">
                 <a href="[% mkurl('', {pane => 'advanced'}) %]"
                     [% IF pane == 'advanced' %]class="on" [% END %]
@@ -26,7 +26,7 @@
             </div>
         </div>
     </div>
-    <div id="content-wrapper"[% IF ctx.physical_dept == 'ys'; ' class="ys"'; END %]>
+    <div id="content-wrapper" class="ys">
         <div id="main-content">
             <div class="advanced_div">
             [% IF pane == 'advanced' %]

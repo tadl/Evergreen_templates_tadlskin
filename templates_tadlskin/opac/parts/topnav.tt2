@@ -1,6 +1,6 @@
 [% IF !ctx.is_staff %]
 <div id="header-wrap">
-<div id="header"[% IF ctx.physical_dept == 'ys'; ' class="ys"'; END %]>
+<div id="header" class="ys">
     [% IF ctx.user && !CGI.cookie('ezproxy') %]
     <iframe style="display: none;" height="1" width="1" src="https://www.tadl.org/proxyvia/login?url=http://via.tadl.org/loggedin/login.html"></iframe>
     [% END %]
@@ -14,17 +14,10 @@
                 class="tbutton medium tadlblue" id="home_myopac_link"><span>
                 [% l('My Account') %]
             </span></a>
-            [% IF ctx.physical_dept == 'ys' -%]
-                <a href="[% mkurl(ctx.opac_root _ '/home', {physical_dept => 'default'}) %]"
-                    class="tbutton medium tadlblue" id="home_theme_link"><span>
-                    [% l('Full Catalog') %]
-                </span></a>
-            [% ELSE %]
-                <a href="[% mkurl(ctx.opac_root _ '/home', {physical_dept => 'ys'}) %]"
-                    class="tbutton medium tadlblue" id="home_theme_link"><span>
-                    [% l('Kids\' Catalog') %]
-                </span></a>
-            [% END %]
+            <a href="https://catalog.tadl.org/eg/opac/home"
+                class="tbutton medium tadlblue" id="home_theme_link"><span>
+                [% l('Full Catalog') %]
+            </span></a>
             <a href="https://www.tadl.org/register"
                 class="tbutton medium tadlblue" id="home_register_link"><span>
                 [% l('Register') %]
@@ -32,17 +25,10 @@
         </div>
         [% ELSE %]
         <div id="dash_wrapper">
-            [% IF ctx.physical_dept == 'ys' -%]
-                <a href="[% mkurl(ctx.opac_root _ '/home', {physical_dept => 'default'}) %]"
-                    class="tbutton medium tadlblue" id="home_theme_link"><span>
-                    [% l('Full Catalog') %]
-                </span></a>
-            [% ELSE %]
-                <a href="[% mkurl(ctx.opac_root _ '/home', {physical_dept => 'ys'}) %]"
-                    class="tbutton medium tadlblue" id="home_theme_link"><span>
-                    [% l('Kids\' Catalog') %]
-                </span></a>
-            [% END %]
+            <a href="https://catalog.tadl.org/eg/opac/home"
+                class="tbutton medium tadlblue" id="home_theme_link"><span>
+                [% l('Full Catalog') %]
+            </span></a>
             <div id="dash_identity">
                 <span id="dash_user">
                     [%  l('[_1] [_2]', ctx.user.first_given_name, ctx.user.family_name) | html %]
