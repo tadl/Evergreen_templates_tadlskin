@@ -22,6 +22,12 @@
                 class="tbutton medium tadlblue" id="home_register_link"><span>
                 [% l('Register') %]
             </span></a>
+            [% IF !ctx.physical_loc.defined || ctx.physical_loc == 23 %]
+            <a href="https://summer.tadl.org/"
+                class="tbutton medium tadlblue" id="home_summer_link"><span>
+                [% l('Summer Reading') %]
+            </span></a>
+            [% END %]
         </div>
         [% ELSE %]
         <div id="dash_wrapper">
