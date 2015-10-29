@@ -3,9 +3,9 @@
 # These are displayed in the order shown
 IF dept == 'ys';
     item_locations = [
-        { 'code' => '527,531,530,532,791,795,529,793,528,794,792,571,516,593,771,770,542,589,549,819,818,817,815,810,813,809', 'value' => 'Juvenile' },
+        { 'code' => '527,531,530,532,791,795,529,793,528,794,792,571,516,593,771,770,542,589,549,819,818,817,815,810,813,809,977,978,979,980,981', 'value' => 'Juvenile' },
         { 'code' => '792', 'indent' => 1, 'value' => 'Nonfiction' },
-        { 'code' => '791,795,529,793,528,794,810,813,819', 'indent' => 1, 'value' => 'Fiction' },
+        { 'code' => '791,795,529,793,528,794,810,813,819,977,978,979,980,981', 'indent' => 1, 'value' => 'Fiction' },
         { 'code' => '571', 'indent' => 1, 'value' => 'Audiobooks' },
         { 'code' => '809', 'indent' => 1, 'value' => 'Foreign Language' },
         { 'code' => '817', 'indent' => 1, 'value' => 'Graphic Novels' },
